@@ -2,10 +2,8 @@ namespace Entities;
 
 public class Comment
 {
-
-    private int id;
-    private int userid;
-    private int postid;
-    private string body; 
-
+    private int Id { get; set; }
+    private int UserId { get; set; }
+    private int PostId { get; set; }
+    private string Body { get; set; }
 }

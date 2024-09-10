@@ -2,12 +2,11 @@
 
 public class Reaction
 {
-    private int id;
-    private int userid;
-    private int postid;
-    private int commentid;
-    private int timestamp;
-    private int upvoteCounter; 
-    private int downvoteCounter;
-    
+    private int Id { get; set; }
+    private int UserId { get; set; }
+    private int PostId { get; set; }
+    private int CommentId { get; set; }
+    private int Timestamp { get; set; }
+    private int UpvoteCounter { get; set; }
+    private int DownvoteCounter { get; set; }
 }

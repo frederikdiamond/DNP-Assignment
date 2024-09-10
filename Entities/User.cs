@@ -2,8 +2,7 @@ namespace Entities;
 
 public class User
 {
-    private int id; 
-    private string username;
-    private string password;
-
+    private int Id { get; set; }
+    private string Username { get; set; }
+    private string Password { get; set; }
 }
