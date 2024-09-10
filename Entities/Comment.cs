@@ -2,8 +2,19 @@ namespace Entities;
 
 public class Comment
 {
-    private int Id { get; set; }
-    private int UserId { get; set; }
-    private int PostId { get; set; }
-    private string Body { get; set; }
+    public int Id { get; set; }
+    public int UserId { get; set; }
+    public int PostId { get; set; }
+    public string Body { get; set; }
+}
+
+
+public class CommentCollection
+{
+    private List<Comment> users;
+
+    public CommentCollection()
+    {
+        users = new List<Comment>();
+    }
 }

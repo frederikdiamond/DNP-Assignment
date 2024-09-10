@@ -2,8 +2,19 @@
 
 public class Category
 {
-    private int Id { get; set; }
-    private int PostId { get; set; }
-    private string Name { get; set; }
-    private string Description { get; set; }
+    public int Id { get; set; }
+    public int PostId { get; set; }
+    public string Name { get; set; }
+    public string Description { get; set; }
+}
+
+
+public class CategoryCollection
+{
+    private List<Category> users;
+
+    public CategoryCollection()
+    {
+        users = new List<Category>();
+    }
 }

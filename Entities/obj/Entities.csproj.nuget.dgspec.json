@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/unknownuser/Library/CloudStorage/OneDrive-ViaUC/Software Engineering/3rd semester/DNP1/DNP-Assignment/Entities/Entities.csproj": {}
+    "C:\\Documents\\IntelliJ work\\DNP-Assignment\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "/Users/unknownuser/Library/CloudStorage/OneDrive-ViaUC/Software Engineering/3rd semester/DNP1/DNP-Assignment/Entities/Entities.csproj": {
+    "C:\\Documents\\IntelliJ work\\DNP-Assignment\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/unknownuser/Library/CloudStorage/OneDrive-ViaUC/Software Engineering/3rd semester/DNP1/DNP-Assignment/Entities/Entities.csproj",
+        "projectUniqueName": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "/Users/unknownuser/Library/CloudStorage/OneDrive-ViaUC/Software Engineering/3rd semester/DNP1/DNP-Assignment/Entities/Entities.csproj",
-        "packagesPath": "/Users/unknownuser/.nuget/packages/",
-        "outputPath": "/Users/unknownuser/Library/CloudStorage/OneDrive-ViaUC/Software Engineering/3rd semester/DNP1/DNP-Assignment/Entities/obj/",
+        "projectPath": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\45257\\.nuget\\packages\\",
+        "outputPath": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/unknownuser/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\45257\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -53,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
