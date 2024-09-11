@@ -16,13 +16,13 @@ public class UserInMemoryRepository : IUserRepository
         return Task.FromResult(user);
     }
     
-    public Task UpdateAsync(Post post)
+    public Task UpdateAsync(User user)
     {
-        User? existingPost = users.SingleOrDefault(p => p.Id == post.Id);
+        User? existingPost = users.SingleOrDefault(p => p.Id == user.Id);
         if (existingPost is null)
         {
             throw new InvalidOperationException(
-                $"Post with ID '{post.Id}' not found");
+                $"Post with ID '{user.Id}' not found");
         }
 
         users.Remove(existingPost);
@@ -50,10 +50,8 @@ public class UserInMemoryRepository : IUserRepository
         return Task.FromResult(user);
     }
     
-    public IQueryable<User> GetManyAsync()
+    public IQueryable<User> GetMany()
     {
         return users.AsQueryable();
     }
-    
-    
 }
