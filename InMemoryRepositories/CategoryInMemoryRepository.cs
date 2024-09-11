@@ -1,8 +1,9 @@
 ﻿using Entities;
+using RepositoryContracts;
 
 namespace InMemoryRepositories;
 
-public class CategoryInMemoryRepository
+public class CategoryInMemoryRepository : ICategoryRepository
 {
     private List<Category> users;
     
