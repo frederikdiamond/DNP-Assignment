@@ -46,19 +46,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/unknownuser/.nuget/packages/": {}
+    "C:\\Users\\45257\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/unknownuser/Library/CloudStorage/OneDrive-ViaUC/Software Engineering/3rd semester/DNP1/DNP-Assignment/InMemoryRepositories/InMemoryRepositories.csproj",
+      "projectUniqueName": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\InMemoryRepositories\\InMemoryRepositories.csproj",
       "projectName": "InMemoryRepositories",
-      "projectPath": "/Users/unknownuser/Library/CloudStorage/OneDrive-ViaUC/Software Engineering/3rd semester/DNP1/DNP-Assignment/InMemoryRepositories/InMemoryRepositories.csproj",
-      "packagesPath": "/Users/unknownuser/.nuget/packages/",
-      "outputPath": "/Users/unknownuser/Library/CloudStorage/OneDrive-ViaUC/Software Engineering/3rd semester/DNP1/DNP-Assignment/InMemoryRepositories/obj/",
+      "projectPath": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\InMemoryRepositories\\InMemoryRepositories.csproj",
+      "packagesPath": "C:\\Users\\45257\\.nuget\\packages\\",
+      "outputPath": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\InMemoryRepositories\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/unknownuser/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\45257\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -70,11 +70,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/unknownuser/Library/CloudStorage/OneDrive-ViaUC/Software Engineering/3rd semester/DNP1/DNP-Assignment/Entities/Entities.csproj": {
-              "projectPath": "/Users/unknownuser/Library/CloudStorage/OneDrive-ViaUC/Software Engineering/3rd semester/DNP1/DNP-Assignment/Entities/Entities.csproj"
+            "C:\\Documents\\IntelliJ work\\DNP-Assignment\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\Entities\\Entities.csproj"
             },
-            "/Users/unknownuser/Library/CloudStorage/OneDrive-ViaUC/Software Engineering/3rd semester/DNP1/DNP-Assignment/RepositoryContracts/RepositoryContracts.csproj": {
-              "projectPath": "/Users/unknownuser/Library/CloudStorage/OneDrive-ViaUC/Software Engineering/3rd semester/DNP1/DNP-Assignment/RepositoryContracts/RepositoryContracts.csproj"
+            "C:\\Documents\\IntelliJ work\\DNP-Assignment\\RepositoryContracts\\RepositoryContracts.csproj": {
+              "projectPath": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\RepositoryContracts\\RepositoryContracts.csproj"
             }
           }
         }
@@ -83,6 +83,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -104,7 +109,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
