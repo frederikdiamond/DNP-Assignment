@@ -11,7 +11,7 @@ public class Comment
 
 public class CommentCollection
 {
-    private List<Comment> users;
+    private List<Comment> users; //List called users for comments?
 
     public CommentCollection()
     {

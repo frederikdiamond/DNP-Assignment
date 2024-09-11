@@ -11,7 +11,7 @@ public class Category
 
 public class CategoryCollection
 {
-    private List<Category> users;
+    private List<Category> users; //List called users for categories?
 
     public CategoryCollection()
     {

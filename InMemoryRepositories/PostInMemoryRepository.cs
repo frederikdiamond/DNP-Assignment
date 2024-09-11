@@ -26,7 +26,7 @@ public class PostInMemoryRepository : IPostRepository
     
     public Task UpdateAsync(Post post)
     {
-        Post? existingPost = posts.SingleOrDefault(p => p.Id == post.Id);
+        var existingPost = posts.SingleOrDefault(p => p.Id == post.Id);
         if (existingPost is null)
         {
             throw new InvalidOperationException(
@@ -41,7 +41,7 @@ public class PostInMemoryRepository : IPostRepository
     
     public Task DeleteAsync(int id)
     {
-        Post? postToRemove = posts.SingleOrDefault(p => p.Id == id);
+        var postToRemove = posts.SingleOrDefault(p => p.Id == id);
         if (postToRemove is null)
         {
             throw new InvalidOperationException(
@@ -54,7 +54,7 @@ public class PostInMemoryRepository : IPostRepository
     
     public Task<Post> GetSingleAsync(int id)
     {
-        Post? post = posts.SingleOrDefault(p => p.Id == id);   //needs checking!
+        var post = posts.SingleOrDefault(p => p.Id == id);   //needs checking!
         return Task.FromResult(post);
     }
     

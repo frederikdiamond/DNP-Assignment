@@ -14,7 +14,7 @@ public class Reaction
 
 public class ReactionCollection
 {
-    private List<Reaction> users;
+    private List<Reaction> users; //List called users for Reactions?
 
     public ReactionCollection()
     {
