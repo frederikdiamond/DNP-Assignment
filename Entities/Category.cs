@@ -11,10 +11,10 @@ public class Category
 
 public class CategoryCollection
 {
-    private List<Category> users; //List called users for categories?
+    private List<Category> categories; 
 
     public CategoryCollection()
     {
-        users = new List<Category>();
+        categories = new List<Category>();
     }
 }

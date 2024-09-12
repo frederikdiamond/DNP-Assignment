@@ -11,10 +11,10 @@ public class Comment
 
 public class CommentCollection
 {
-    private List<Comment> users; //List called users for comments?
+    private List<Comment> comments; 
 
     public CommentCollection()
     {
-        users = new List<Comment>();
+        comments = new List<Comment>();
     }
 }

@@ -4,56 +4,56 @@ namespace InMemoryRepositories;
 
 public class ReactionInMemoryRepository
 {
-    private List<Reaction> users;
+    private List<Reaction> reactions;
     
     
     public Task<Reaction> AddAsync(Reaction reaction)
     {
         reaction.Id = users.Any() 
-            ? users.Max(p => p.Id) + 1
+            ? reactions.Max(p => p.Id) + 1
             : 1;
-        users.Add(reaction);
+        reactions.Add(reaction);
         return Task.FromResult(reaction);
     }
     
     public Task UpdateAsync(Reaction reaction)
     {
-        Reaction? existingPost = users.SingleOrDefault(p => p.Id == reaction.Id);
+        Reaction? existingPost = reactions.SingleOrDefault(p => p.Id == reaction.Id);
         if (existingPost is null)
         {
             throw new InvalidOperationException(
                 $"Post with ID '{reaction.Id}' not found");
         }
 
-        users.Remove(existingPost);
-        users.Add(reaction);
+        reactions.Remove(existingPost);
+        reactions.Add(reaction);
 
         return Task.CompletedTask;
     }
     
     public Task DeleteAsync(int id)
     {
-        Reaction? postToRemove = users.SingleOrDefault(p => p.Id == id);
+        Reaction? postToRemove = reactions.SingleOrDefault(p => p.Id == id);
         if (postToRemove is null)
         {
             throw new InvalidOperationException(
                 $"Post with ID '{id}' not found");
         }
 
-        users.Remove(postToRemove);
+        reactions.Remove(postToRemove);
         return Task.CompletedTask;
     }
     
     public Task<Reaction> GetSingleAsync(int id)
     {
-        Reaction? reaction = users.SingleOrDefault(p => p.Id == id);  //needs checking!! 
+        Reaction? reaction = reactions.SingleOrDefault(p => p.Id == id);  
         return Task.FromResult(reaction);
     }
     
     
     public IQueryable<Reaction> GetMany()
     {
-        return users.AsQueryable();
+        return reactions.AsQueryable();
     }
     
     

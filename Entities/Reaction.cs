@@ -14,10 +14,10 @@ public class Reaction
 
 public class ReactionCollection
 {
-    private List<Reaction> users; //List called users for Reactions?
+    private List<Reaction> reactions; 
 
     public ReactionCollection()
     {
-        users = new List<Reaction>();
+        reactions = new List<Reaction>();
     }
 }
