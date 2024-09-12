@@ -43,7 +43,7 @@ public class CategoryInMemoryRepository : ICategoryRepository
                 $"Post with ID '{id}' not found");
         }
 
-        categores.Remove(postToRemove);
+        categories.Remove(postToRemove);
         return Task.CompletedTask;
     }
     

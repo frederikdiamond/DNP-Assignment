@@ -9,7 +9,7 @@ public class ReactionInMemoryRepository
     
     public Task<Reaction> AddAsync(Reaction reaction)
     {
-        reaction.Id = users.Any() 
+        reaction.Id = reactions.Any() 
             ? reactions.Max(p => p.Id) + 1
             : 1;
         reactions.Add(reaction);
