@@ -7,6 +7,11 @@ public class UserInMemoryRepository : IUserRepository
 {
     private List<User> users;
     
+    public UserInMemoryRepository()
+    {
+        users = new List<User>();
+    }
+    
     public Task<User> AddAsync(User user)
     {
         user.Id = users.Any() 
@@ -18,14 +23,14 @@ public class UserInMemoryRepository : IUserRepository
     
     public Task UpdateAsync(User user)
     {
-        User? existingPost = users.SingleOrDefault(p => p.Id == user.Id);
-        if (existingPost is null)
+        User? existingUser = users.SingleOrDefault(p => p.Id == user.Id);
+        if (existingUser is null)
         {
             throw new InvalidOperationException(
                 $"Post with ID '{user.Id}' not found");
         }
 
-        users.Remove(existingPost);
+        users.Remove(existingUser);
         users.Add(user);
 
         return Task.CompletedTask;
@@ -33,14 +38,14 @@ public class UserInMemoryRepository : IUserRepository
     
     public Task DeleteAsync(int id)
     {
-        User? postToRemove = users.SingleOrDefault(p => p.Id == id);
-        if (postToRemove is null)
+        User? userToRemove = users.SingleOrDefault(p => p.Id == id);
+        if (userToRemove is null)
         {
             throw new InvalidOperationException(
                 $"Post with ID '{id}' not found");
         }
 
-        users.Remove(postToRemove);
+        users.Remove(userToRemove);
         return Task.CompletedTask;
     }
     

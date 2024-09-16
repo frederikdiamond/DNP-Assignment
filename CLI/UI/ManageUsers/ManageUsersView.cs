@@ -1,6 +1,27 @@
-﻿namespace CLI.UI.ManageUsers;
+﻿using RepositoryContracts;
+
+namespace CLI.UI.ManageUsers;
 
 public class ManageUsersView
 {
-    //This class should make an instance of Create and list users when they are needed
+    private readonly IUserRepository userRepository;
+
+    // Constructor injection for IUserRepository
+    public ManageUsersView(IUserRepository userRepository)
+    {
+        this.userRepository = userRepository;
+    }
+    
+    public async Task CreateUserAsync()
+    {
+        // Create the CreateUserView and pass the repository
+        CreateUserView createUserView = new CreateUserView(userRepository);
+        await createUserView.DisplayCreateAsync();
+    }
+
+    public void ListUsers()
+    {
+        ListUsersView listUsersView = new ListUsersView();
+        listUsersView.Display();
+    }
 }
