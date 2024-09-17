@@ -21,7 +21,7 @@ public class ManageUsersView
 
     public void ListUsers()
     {
-        ListUsersView listUsersView = new ListUsersView();
-        listUsersView.Display();
+        ListUsersView listUsersView = new ListUsersView(userRepository);
+        listUsersView.DisplayUsers();
     }
 }

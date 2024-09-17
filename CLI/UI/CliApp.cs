@@ -1,4 +1,5 @@
-﻿using CLI.UI.ManageUsers;
+﻿using CLI.UI.ManagePosts;
+using CLI.UI.ManageUsers;
 using RepositoryContracts;
 
 namespace CLI.UI;
@@ -7,36 +8,47 @@ public class CliApp
 {      
     
     private readonly ManageUsersView manageUserView;
+    private readonly ManagePostsView managePostView;
     
-    public CliApp(IUserRepository userRepository)
+    public CliApp(IUserRepository userRepository, IPostRepository postRepository)
     {
         manageUserView = new ManageUsersView(userRepository);
+        managePostView = new ManagePostsView(postRepository);
     }
 
     public void Run()
     {
-        // Main loop of the CLI app
+        // Main loop of the CliApp
         while (true)
         {
-            Console.WriteLine("Enter 'create' to create a user, 'list' to list users, or 'exit' to quit: ");
+            Console.WriteLine("Enter 'create user', 'list users', 'create post', 'list posts', or 'exit' to quit: ");
             string action = Console.ReadLine()?.ToLower();
 
-            if (action == "create")
+            switch (action)
             {
-                manageUserView.CreateUserAsync();
-            }
-            else if (action == "list")
-            {
-                manageUserView.ListUsers();
-            }
-            else if (action == "exit")
-            {
-                Console.WriteLine("Exiting...");
-                break;
-            }
-            else
-            {
-                Console.WriteLine("Invalid command. Please try again.");
+                case "create user":
+                    manageUserView.CreateUserAsync();
+                    break;
+
+                case "list users":
+                    manageUserView.ListUsers();
+                    break;
+
+                case "create post":
+                    managePostView.CreatePostAsync();
+                    break;
+
+                case "list posts":
+                    managePostView.ListPosts();
+                    break;
+
+                case "exit":
+                    Console.WriteLine("Exiting...");
+                    return;
+
+                default:
+                    Console.WriteLine("Invalid command. Please try again.");
+                    break;
             }
         }
     }
