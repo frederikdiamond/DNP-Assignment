@@ -22,6 +22,12 @@ public class ManagePostsView
     public void ListPosts()
     {
         ListPostsView listPostsView = new ListPostsView(postRepository);
-        listPostsView.DisplayPosts();
+        listPostsView.DisplayPosts(); //should be async
+    }
+
+    public void ViewPost()
+    {
+        SinglePostView singlePostView = new SinglePostView(postRepository);
+        singlePostView.DisplayPostByIdAsync(); //How do why find a post? should this be async?
     }
 }
