@@ -8,5 +8,5 @@ IUserRepository userRepository = new UserInMemoryRepository();
 ICommentRepository commentRepository = new CommentInMemoryRepository();
 IPostRepository postRepository = new PostInMemoryRepository();
 
-CliApp cliApp = new CliApp(userRepository);
+CliApp cliApp = new CliApp(userRepository, postRepository);
 await cliApp.StartAsync();
