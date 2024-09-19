@@ -13,3 +13,12 @@ C:\Users\Nikolai A. Semak\Documents\GitHub\DNP-Assignment\CLI\obj\Debug\net8.0\r
 C:\Users\Nikolai A. Semak\Documents\GitHub\DNP-Assignment\CLI\obj\Debug\net8.0\CLI.pdb
 C:\Users\Nikolai A. Semak\Documents\GitHub\DNP-Assignment\CLI\obj\Debug\net8.0\CLI.genruntimeconfig.cache
 C:\Users\Nikolai A. Semak\Documents\GitHub\DNP-Assignment\CLI\obj\Debug\net8.0\ref\CLI.dll
+C:\Documents\IntelliJ work\DNP-Assignment\CLI\obj\Debug\net8.0\CLI.csproj.AssemblyReference.cache
+C:\Documents\IntelliJ work\DNP-Assignment\CLI\obj\Debug\net8.0\CLI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Documents\IntelliJ work\DNP-Assignment\CLI\obj\Debug\net8.0\CLI.AssemblyInfoInputs.cache
+C:\Documents\IntelliJ work\DNP-Assignment\CLI\obj\Debug\net8.0\CLI.AssemblyInfo.cs
+C:\Documents\IntelliJ work\DNP-Assignment\CLI\obj\Debug\net8.0\CLI.csproj.CoreCompileInputs.cache
+C:\Documents\IntelliJ work\DNP-Assignment\CLI\obj\Debug\net8.0\CLI.sourcelink.json
+C:\Documents\IntelliJ work\DNP-Assignment\CLI\obj\Debug\net8.0\CLI.dll
+C:\Documents\IntelliJ work\DNP-Assignment\CLI\obj\Debug\net8.0\refint\CLI.dll
+C:\Documents\IntelliJ work\DNP-Assignment\CLI\obj\Debug\net8.0\CLI.pdb

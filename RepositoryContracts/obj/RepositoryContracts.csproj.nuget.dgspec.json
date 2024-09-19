@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nikolai A. Semak\\Documents\\GitHub\\DNP-Assignment\\RepositoryContracts\\RepositoryContracts.csproj": {}
+    "C:\\Documents\\IntelliJ work\\DNP-Assignment\\RepositoryContracts\\RepositoryContracts.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nikolai A. Semak\\Documents\\GitHub\\DNP-Assignment\\Entities\\Entities.csproj": {
+    "C:\\Documents\\IntelliJ work\\DNP-Assignment\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nikolai A. Semak\\Documents\\GitHub\\DNP-Assignment\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\Nikolai A. Semak\\Documents\\GitHub\\DNP-Assignment\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\Nikolai A. Semak\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nikolai A. Semak\\Documents\\GitHub\\DNP-Assignment\\Entities\\obj\\",
+        "projectPath": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\45257\\.nuget\\packages\\",
+        "outputPath": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Nikolai A. Semak\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\45257\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -62,17 +62,17 @@
         }
       }
     },
-    "C:\\Users\\Nikolai A. Semak\\Documents\\GitHub\\DNP-Assignment\\RepositoryContracts\\RepositoryContracts.csproj": {
+    "C:\\Documents\\IntelliJ work\\DNP-Assignment\\RepositoryContracts\\RepositoryContracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nikolai A. Semak\\Documents\\GitHub\\DNP-Assignment\\RepositoryContracts\\RepositoryContracts.csproj",
+        "projectUniqueName": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\RepositoryContracts\\RepositoryContracts.csproj",
         "projectName": "RepositoryContracts",
-        "projectPath": "C:\\Users\\Nikolai A. Semak\\Documents\\GitHub\\DNP-Assignment\\RepositoryContracts\\RepositoryContracts.csproj",
-        "packagesPath": "C:\\Users\\Nikolai A. Semak\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nikolai A. Semak\\Documents\\GitHub\\DNP-Assignment\\RepositoryContracts\\obj\\",
+        "projectPath": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\RepositoryContracts\\RepositoryContracts.csproj",
+        "packagesPath": "C:\\Users\\45257\\.nuget\\packages\\",
+        "outputPath": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\RepositoryContracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Nikolai A. Semak\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\45257\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -84,8 +84,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Nikolai A. Semak\\Documents\\GitHub\\DNP-Assignment\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Nikolai A. Semak\\Documents\\GitHub\\DNP-Assignment\\Entities\\Entities.csproj"
+              "C:\\Documents\\IntelliJ work\\DNP-Assignment\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\Entities\\Entities.csproj"
               }
             }
           }

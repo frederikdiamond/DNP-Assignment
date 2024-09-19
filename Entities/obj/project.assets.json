@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Nikolai A. Semak\\.nuget\\packages\\": {}
+    "C:\\Users\\45257\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nikolai A. Semak\\Documents\\GitHub\\DNP-Assignment\\Entities\\Entities.csproj",
+      "projectUniqueName": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\Users\\Nikolai A. Semak\\Documents\\GitHub\\DNP-Assignment\\Entities\\Entities.csproj",
-      "packagesPath": "C:\\Users\\Nikolai A. Semak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nikolai A. Semak\\Documents\\GitHub\\DNP-Assignment\\Entities\\obj\\",
+      "projectPath": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\Entities\\Entities.csproj",
+      "packagesPath": "C:\\Users\\45257\\.nuget\\packages\\",
+      "outputPath": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Nikolai A. Semak\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\45257\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"

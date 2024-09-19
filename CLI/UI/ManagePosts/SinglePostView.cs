@@ -14,22 +14,29 @@ public class SinglePostView
     }
 
     // Method to display a single post by its ID
-    public async Task DisplayPostByIdAsync(int postId)
+    public async Task DisplayPostByIdAsync()
     {
-        // Fetch the post from the repository 
-        Post post = await postRepository.GetSingleAsync(postId);
-
-        if (post == null)
+        Console.Write("Enter post ID: ");
+        if (int.TryParse(Console.ReadLine(), out int postId))
         {
-            Console.WriteLine($"Post with ID {postId} not found.");
-            return;
-        }
+            var post = await postRepository.GetSingleAsync(postId);
 
-        // Display the post details
-        Console.WriteLine("Post Details:");
-        Console.WriteLine($"ID: {post.Id}");
-        Console.WriteLine($"Title: {post.Title}");
-        Console.WriteLine($"Body: {post.Body}");
-        Console.WriteLine($"Created By User ID: {post.UserId}");
+            if (post == null)
+            {
+                Console.WriteLine($"Post with ID {postId} not found.");
+                return;
+            }
+
+            Console.WriteLine("Post Details:");
+            Console.WriteLine($"ID: {post.Id}");
+            Console.WriteLine($"Title: {post.Title}");
+            Console.WriteLine($"Body: {post.Body}");
+            Console.WriteLine($"Created At: {post.CreatedAt}");
+        }
+        else
+        {
+            Console.WriteLine("Invalid post ID.");
+        }
     }
+    
 }

@@ -18,6 +18,9 @@ public class CreateUserView
         Console.WriteLine("Creating a new user...");
         Console.Write("Enter username: ");
         string username = Console.ReadLine();
+        
+        Console.Write("Enter password: ");
+        string password = Console.ReadLine();
             
         // Call AddUser to add the new user before confirming it was created
         await AddUserAsync(username);
@@ -27,10 +30,11 @@ public class CreateUserView
 
     private async Task AddUserAsync(string username)
     {
-       
+        string password = null;
         User newUser = new User
         {
             Username = username,
+            Password = password,
             // add other properties (password, etc.)
         };
 

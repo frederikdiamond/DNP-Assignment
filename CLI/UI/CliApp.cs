@@ -16,7 +16,7 @@ public class CliApp
         managePostView = new ManagePostsView(postRepository);
     }
 
-    public void Run()
+    public async Task RunAsync()
     {
         // Main loop of the CliApp
         while (true)
@@ -52,4 +52,6 @@ public class CliApp
             }
         }
     }
+
+    
 }
