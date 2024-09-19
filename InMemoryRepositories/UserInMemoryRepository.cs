@@ -15,8 +15,7 @@ public class UserInMemoryRepository : IUserRepository
     public Task<User> AddAsync(User user)
     {
         user.Id = users.Any() 
-            ? users.Max(p => p.Id) + 1
-            : 1;
+            ? users.Max(p => p.Id) + 1 : 1;
         users.Add(user);
         return Task.FromResult(user);
     }
@@ -26,12 +25,9 @@ public class UserInMemoryRepository : IUserRepository
         User? existingUser = users.SingleOrDefault(p => p.Id == user.Id);
         if (existingUser is null)
         {
-            throw new InvalidOperationException(
-                $"Post with ID '{user.Id}' not found");
+            users.Remove(existingUser);
+            users.Add(user);
         }
-
-        users.Remove(existingUser);
-        users.Add(user);
 
         return Task.CompletedTask;
     }
@@ -58,5 +54,16 @@ public class UserInMemoryRepository : IUserRepository
     public IQueryable<User> GetMany()
     {
         return users.AsQueryable();
+    }
+    public async Task AddUserAsync(string name, string password)
+    {
+        User user = new User
+        {
+            Username = name,
+            Password = password
+        };
+        
+        User created = await AddAsync(user);
+        Console.WriteLine($"User '{created.Username}' added successfully with ID: {created.Id}");
     }
 }

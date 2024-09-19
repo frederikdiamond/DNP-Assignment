@@ -58,9 +58,21 @@ public class PostInMemoryRepository : IPostRepository
         return Task.FromResult(post);
     }
     
-    
-    public IQueryable<Post> GetMany()
+    public async Task AddPostAsync(string title, string body)
     {
-        return posts.AsQueryable();
+        Post post = new Post
+        {
+            Title = title,
+            Body = body
+        };
+        
+        Post created = await AddAsync(post);
+        Console.WriteLine($"Post '{created.Title}' created successfully with Body: {created.Body} and Id: {created.Id}");
     }
+    
+    public async Task<IQueryable<Post>> GetManyAsync()
+    {
+        return await Task.FromResult(posts.AsQueryable());
+    }
+
 }

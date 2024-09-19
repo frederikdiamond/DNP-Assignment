@@ -10,11 +10,4 @@ public interface IUserRepository
     Task<User> GetSingleAsync(int id);
     IQueryable<User> GetMany();  
     
-    
-    private async Task AddUserAsync(string name, string password)
-    {
-        // ...
-        User created = await userRepository.AddAsync(user);
-        // ...
-    }
 }

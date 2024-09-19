@@ -19,15 +19,15 @@ public class ManagePostsView
         await createPostView.DisplayCreatePostAsync();
     }
 
-    public void ListPosts()
+    public async Task ListPosts()
     {
         ListPostsView listPostsView = new ListPostsView(postRepository);
-        listPostsView.DisplayPosts(); //should be async
+        await listPostsView.DisplayPostsAsync(); 
     }
 
     public async Task ViewPostAsync()
     {
         SinglePostView singlePostView = new SinglePostView(postRepository);
-         singlePostView.DisplayPostByIdAsync(); //How do why find a post? should this be async?
+        singlePostView.DisplayPostByIdAsync(); //How do why find a post? should this be async?
     }
 }

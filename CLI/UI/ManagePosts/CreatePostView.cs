@@ -21,6 +21,7 @@ public class CreatePostView
         Console.Write("Enter post body: ");
         string body = Console.ReadLine();
         
+        await CreatePostAsync(title, body);
         Console.WriteLine($"Post '{title}' with text '{body}' created successfully!");
     }
 
@@ -34,7 +35,7 @@ public class CreatePostView
         };
 
 
-        // Add the user to the repository
+        // Add the post to the repository
         await postRepository.AddAsync(newPost);
     }
 }

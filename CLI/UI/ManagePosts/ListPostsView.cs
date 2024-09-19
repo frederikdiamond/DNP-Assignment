@@ -12,9 +12,9 @@ public class ListPostsView
         this.postRepository = postRepository;
     }
     
-    public void DisplayPosts()
+    public async Task DisplayPostsAsync()
     {
-        var posts = postRepository.GetMany().ToList(); // Get the posts from the repository
+        var posts = (await postRepository.GetManyAsync()).ToList();
 
         if (!posts.Any())
         {
