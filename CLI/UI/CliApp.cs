@@ -21,13 +21,13 @@ public class CliApp
         // Main loop of the CliApp
         while (true)
         {
-            Console.WriteLine("Enter 'create user', 'list users', 'create post', 'list posts', or 'exit' to quit: ");
+            Console.WriteLine("Enter 'create user', 'list users', 'create post', 'list posts', 'view post' or 'exit' to quit: ");
             string action = Console.ReadLine()?.ToLower();
 
             switch (action)
             {
                 case "create user":
-                    manageUserView.CreateUserAsync();
+                    await manageUserView.CreateUserAsync();
                     break;
 
                 case "list users":
@@ -35,13 +35,17 @@ public class CliApp
                     break;
 
                 case "create post":
-                    managePostView.CreatePostAsync();
+                    await managePostView.CreatePostAsync();
                     break;
 
                 case "list posts":
                     managePostView.ListPosts();
                     break;
-
+                
+                case "view post":
+                    managePostView.ViewPostAsync();
+                    break;
+                
                 case "exit":
                     Console.WriteLine("Exiting...");
                     return;
@@ -52,6 +56,4 @@ public class CliApp
             }
         }
     }
-
-    
 }

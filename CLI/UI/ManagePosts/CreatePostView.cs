@@ -21,21 +21,21 @@ public class CreatePostView
         Console.Write("Enter post body: ");
         string body = Console.ReadLine();
         
-        await CreatePostAsync(title, body);
-        Console.WriteLine($"Post '{title}' with text '{body}' created successfully!");
+        Post createdPost = await CreatePostAsync(title, body);
+        Console.WriteLine($"Post '{createdPost.Title}' with text '{createdPost.Body}' created successfully with ID: {createdPost.PostId}!");
     }
 
-    private async Task CreatePostAsync(string title, string body)
+    private async Task<Post> CreatePostAsync(string title, string body)
     {
         // Create a new Post object
         Post newPost = new Post
         {
             Title = title,
             Body = body,
+            // You may want to set UserId here if applicable
         };
 
-
-        // Add the post to the repository
-        await postRepository.AddAsync(newPost);
+        // Add the post to the repository and return the created post
+        return await postRepository.AddAsync(newPost);
     }
 }
