@@ -28,10 +28,13 @@ public class ManagePostsView
 
     public async Task ViewPostAsync()
     {
-        SinglePostView singlePostView = new SinglePostView(postRepository, userRepository);
+        Console.Write("Enter post ID: ");
         if (int.TryParse(Console.ReadLine(), out int postId))
         {
-            await singlePostView.DisplayPostByIdAsync();
+            Console.WriteLine($"Attempting to retrieve post with ID: {postId}");
+            
+            SinglePostView singlePostView = new SinglePostView(postRepository, userRepository);
+            await singlePostView.DisplayPostByIdAsync(postId); // Passing the postId directly
         }
         else
         {

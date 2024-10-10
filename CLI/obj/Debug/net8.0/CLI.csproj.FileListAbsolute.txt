@@ -45,3 +45,5 @@ C:\Users\Nikolai\Documents\GitHub\DNP-Assignment\CLI\obj\Debug\net8.0\refint\CLI
 C:\Users\Nikolai\Documents\GitHub\DNP-Assignment\CLI\obj\Debug\net8.0\CLI.pdb
 C:\Users\Nikolai\Documents\GitHub\DNP-Assignment\CLI\obj\Debug\net8.0\CLI.genruntimeconfig.cache
 C:\Users\Nikolai\Documents\GitHub\DNP-Assignment\CLI\obj\Debug\net8.0\ref\CLI.dll
+C:\Users\Nikolai\Documents\GitHub\DNP-Assignment\CLI\bin\Debug\net8.0\FileRepositories.dll
+C:\Users\Nikolai\Documents\GitHub\DNP-Assignment\CLI\bin\Debug\net8.0\FileRepositories.pdb

@@ -14,9 +14,9 @@ namespace CLI.UI.ManageUsers
         }
 
         
-        public void DisplayUsers()
+        public async Task DisplayUsers()
         {
-            var users = userRepository.GetMany().ToList(); // Get the users from the repository
+            var users = await userRepository.GetMany(); // Get the users from the repository
 
             if (!users.Any())
             {

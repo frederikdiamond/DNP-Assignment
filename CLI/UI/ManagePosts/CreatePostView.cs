@@ -22,7 +22,7 @@ public class CreatePostView
         string body = Console.ReadLine();
         
         Post createdPost = await CreatePostAsync(title, body);
-        Console.WriteLine($"Post '{createdPost.Title}' with text '{createdPost.Body}' created successfully with ID: {createdPost.PostId}!");
+        Console.WriteLine($"Post '{createdPost.Title}' with body '{createdPost.Body}' created successfully with ID: {createdPost.PostId}!");
     }
 
     private async Task<Post> CreatePostAsync(string title, string body)
