@@ -85,19 +85,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Nikolai\\.nuget\\packages\\": {}
+    "/Users/unknownuser/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nikolai\\Documents\\GitHub\\DNP-Assignment\\CLI\\CLI.csproj",
+      "projectUniqueName": "/Users/unknownuser/dev_projects/school/DNP-Assignment/CLI/CLI.csproj",
       "projectName": "CLI",
-      "projectPath": "C:\\Users\\Nikolai\\Documents\\GitHub\\DNP-Assignment\\CLI\\CLI.csproj",
-      "packagesPath": "C:\\Users\\Nikolai\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nikolai\\Documents\\GitHub\\DNP-Assignment\\CLI\\obj\\",
+      "projectPath": "/Users/unknownuser/dev_projects/school/DNP-Assignment/CLI/CLI.csproj",
+      "packagesPath": "/Users/unknownuser/.nuget/packages/",
+      "outputPath": "/Users/unknownuser/dev_projects/school/DNP-Assignment/CLI/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Nikolai\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/unknownuser/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -109,17 +109,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Nikolai\\Documents\\GitHub\\DNP-Assignment\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\Nikolai\\Documents\\GitHub\\DNP-Assignment\\Entities\\Entities.csproj"
+            "/Users/unknownuser/dev_projects/school/DNP-Assignment/Entities/Entities.csproj": {
+              "projectPath": "/Users/unknownuser/dev_projects/school/DNP-Assignment/Entities/Entities.csproj"
             },
-            "C:\\Users\\Nikolai\\Documents\\GitHub\\DNP-Assignment\\FileRepositories\\FileRepositories.csproj": {
-              "projectPath": "C:\\Users\\Nikolai\\Documents\\GitHub\\DNP-Assignment\\FileRepositories\\FileRepositories.csproj"
+            "/Users/unknownuser/dev_projects/school/DNP-Assignment/FileRepositories/FileRepositories.csproj": {
+              "projectPath": "/Users/unknownuser/dev_projects/school/DNP-Assignment/FileRepositories/FileRepositories.csproj"
             },
-            "C:\\Users\\Nikolai\\Documents\\GitHub\\DNP-Assignment\\InMemoryRepositories\\InMemoryRepositories.csproj": {
-              "projectPath": "C:\\Users\\Nikolai\\Documents\\GitHub\\DNP-Assignment\\InMemoryRepositories\\InMemoryRepositories.csproj"
+            "/Users/unknownuser/dev_projects/school/DNP-Assignment/InMemoryRepositories/InMemoryRepositories.csproj": {
+              "projectPath": "/Users/unknownuser/dev_projects/school/DNP-Assignment/InMemoryRepositories/InMemoryRepositories.csproj"
             },
-            "C:\\Users\\Nikolai\\Documents\\GitHub\\DNP-Assignment\\RepositoryContracts\\RepositoryContracts.csproj": {
-              "projectPath": "C:\\Users\\Nikolai\\Documents\\GitHub\\DNP-Assignment\\RepositoryContracts\\RepositoryContracts.csproj"
+            "/Users/unknownuser/dev_projects/school/DNP-Assignment/RepositoryContracts/RepositoryContracts.csproj": {
+              "projectPath": "/Users/unknownuser/dev_projects/school/DNP-Assignment/RepositoryContracts/RepositoryContracts.csproj"
             }
           }
         }
@@ -128,11 +128,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -154,7 +149,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\Nikolai\\.dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
