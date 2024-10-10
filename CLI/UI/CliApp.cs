@@ -13,7 +13,7 @@ public class CliApp
     public CliApp(IUserRepository userRepository, IPostRepository postRepository)
     {
         manageUserView = new ManageUsersView(userRepository);
-        managePostView = new ManagePostsView(postRepository);
+        managePostView = new ManagePostsView(postRepository, userRepository);
     }
 
     public async Task RunAsync()
@@ -21,7 +21,7 @@ public class CliApp
         // Main loop of the CliApp
         while (true)
         {
-            Console.WriteLine("Enter 'create user', 'list users', 'create post', 'list posts', 'view post' or 'exit' to quit: ");
+            Console.WriteLine("Enter [create user]  [list users]  [create post]  [list posts]  [view post] or [exit] to quit: ");
             string action = Console.ReadLine()?.ToLower();
 
             switch (action)

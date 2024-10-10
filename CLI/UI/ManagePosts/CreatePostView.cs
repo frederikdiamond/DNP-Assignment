@@ -6,10 +6,11 @@ namespace CLI.UI.ManagePosts;
 public class CreatePostView
 {
     private readonly IPostRepository postRepository;
-
-    public CreatePostView(IPostRepository postRepository)
+    private readonly IUserRepository userRepository;
+    public CreatePostView(IPostRepository postRepository, IUserRepository userRepository)
     {
         this.postRepository = postRepository;
+        this.userRepository = userRepository;
     }
     
     public async Task DisplayCreatePostAsync()
@@ -21,18 +22,44 @@ public class CreatePostView
         Console.Write("Enter post body: ");
         string body = Console.ReadLine();
         
-        Post createdPost = await CreatePostAsync(title, body);
-        Console.WriteLine($"Post '{createdPost.Title}' with body '{createdPost.Body}' created successfully with ID: {createdPost.PostId}!");
-    }
+        int userId;
+        User user = null;
+        
+        //add the userId to the post manually,
+        //will later be replaced because a proper login system will be implemented
+        while (true)
+        {
+            Console.Write("Enter the User ID of the post's creator: ");
+            
+            // Check if the input can be parsed to an integer
+            if (int.TryParse(Console.ReadLine(), out userId))
+            {
+                // Check if the user exists
+                user = await userRepository.GetSingleAsync(userId);
+                if (user != null)
+                {
+                    break; // Exit the loop if user is valid
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid User ID. Please enter a valid number.");
+            }
+        }
 
-    private async Task<Post> CreatePostAsync(string title, string body)
+            // Create the post with valid UserId
+            Post createdPost = await CreatePostAsync(title, body, userId);
+            Console.WriteLine($"Post '{createdPost.Title}' with body '{createdPost.Body}' created successfully by user '{user.Username}' with ID: {createdPost.PostId}!");
+        }
+
+    private async Task<Post> CreatePostAsync(string title, string body, int userId)
     {
         // Create a new Post object
         Post newPost = new Post
         {
             Title = title,
             Body = body,
-            // You may want to set UserId here if applicable
+            UserId = userId,
         };
 
         // Add the post to the repository and return the created post
