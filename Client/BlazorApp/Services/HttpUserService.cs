@@ -1,6 +1,9 @@
-﻿namespace BlazorApp.Services;
+﻿using ApiContracts;
+
+namespace BlazorApp.Services;
 using System.Text.Json;
 using System.Net.Http.Json;
+
 
 public class HttpUserService
 {
@@ -27,8 +30,8 @@ public class HttpUserService
 
     public Task UpdateUserAsync(int id, UpdateUserDto request)
     {
-        // todo...
-    };
+        return null;  // todo...
+    }
     
     // more methods...
 }

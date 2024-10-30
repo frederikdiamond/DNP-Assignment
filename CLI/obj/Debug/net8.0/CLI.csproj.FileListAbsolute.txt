@@ -47,3 +47,19 @@ C:\Users\Nikolai\Documents\GitHub\DNP-Assignment\CLI\obj\Debug\net8.0\CLI.genrun
 C:\Users\Nikolai\Documents\GitHub\DNP-Assignment\CLI\obj\Debug\net8.0\ref\CLI.dll
 C:\Users\Nikolai\Documents\GitHub\DNP-Assignment\CLI\bin\Debug\net8.0\FileRepositories.dll
 C:\Users\Nikolai\Documents\GitHub\DNP-Assignment\CLI\bin\Debug\net8.0\FileRepositories.pdb
+C:\Documents\IntelliJ work\DNP-Assignment\CLI\bin\Debug\net8.0\CLI.exe
+C:\Documents\IntelliJ work\DNP-Assignment\CLI\bin\Debug\net8.0\CLI.deps.json
+C:\Documents\IntelliJ work\DNP-Assignment\CLI\bin\Debug\net8.0\CLI.runtimeconfig.json
+C:\Documents\IntelliJ work\DNP-Assignment\CLI\bin\Debug\net8.0\CLI.dll
+C:\Documents\IntelliJ work\DNP-Assignment\CLI\bin\Debug\net8.0\CLI.pdb
+C:\Documents\IntelliJ work\DNP-Assignment\CLI\bin\Debug\net8.0\Entities.dll
+C:\Documents\IntelliJ work\DNP-Assignment\CLI\bin\Debug\net8.0\FileRepositories.dll
+C:\Documents\IntelliJ work\DNP-Assignment\CLI\bin\Debug\net8.0\InMemoryRepositories.dll
+C:\Documents\IntelliJ work\DNP-Assignment\CLI\bin\Debug\net8.0\RepositoryContracts.dll
+C:\Documents\IntelliJ work\DNP-Assignment\CLI\bin\Debug\net8.0\Entities.pdb
+C:\Documents\IntelliJ work\DNP-Assignment\CLI\bin\Debug\net8.0\FileRepositories.pdb
+C:\Documents\IntelliJ work\DNP-Assignment\CLI\bin\Debug\net8.0\InMemoryRepositories.pdb
+C:\Documents\IntelliJ work\DNP-Assignment\CLI\bin\Debug\net8.0\RepositoryContracts.pdb
+C:\Documents\IntelliJ work\DNP-Assignment\CLI\obj\Debug\net8.0\CLI.csproj.Up2Date
+C:\Documents\IntelliJ work\DNP-Assignment\CLI\obj\Debug\net8.0\CLI.genruntimeconfig.cache
+C:\Documents\IntelliJ work\DNP-Assignment\CLI\obj\Debug\net8.0\ref\CLI.dll

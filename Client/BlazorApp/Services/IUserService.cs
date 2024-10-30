@@ -1,4 +1,6 @@
-﻿namespace BlazorApp.Services;
+﻿using ApiContracts;
+
+namespace BlazorApp.Services;
 
 public class IUserService
 {
