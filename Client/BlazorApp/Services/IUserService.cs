@@ -2,9 +2,12 @@
 
 namespace BlazorApp.Services;
 
-public class IUserService
+public interface IUserService
 {
-    public Task<UserDto> AddUserAsync(CreateUserDto request);
-    public Task UpdateUserAsync(int id, UpdateUserDto request);
-    // ... more methods
+   
+    Task<UserDto> CreateAsync(CreateUserDto dto);
+    Task<IEnumerable<UserDto>> GetAsync(string? username);
+    Task<UserDto> GetByIdAsync(int id);
+    Task UpdateAsync(int id, UpdateUserDto dto);
+    Task DeleteAsync(int id);
 }
