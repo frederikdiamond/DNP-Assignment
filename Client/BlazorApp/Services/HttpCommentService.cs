@@ -2,20 +2,20 @@
 
 namespace BlazorApp.Services;
 
-public class CommentService
+public class HttpCommentService
 {
     public class CommentService : ICommentService
     {
-        private readonly HttpClient _httpClient;
+        private readonly HttpClient httpClient;
 
         public CommentService(HttpClient httpClient)
         {
-            _httpClient = httpClient;
+            this.httpClient = httpClient;
         }
 
         public async Task<CommentDto> CreateAsync(CreateCommentDto dto)
         {
-            var response = await _httpClient.PostAsJsonAsync("api/comments", dto);
+            var response = await httpClient.PostAsJsonAsync("api/comments", dto);
             response.EnsureSuccessStatusCode();
             return await response.Content.ReadFromJsonAsync<CommentDto>()!;
         }
@@ -27,13 +27,13 @@ public class CommentService
             {
                 url += $"?authorUsername={authorUsername}";
             }
-            var comments = await _httpClient.GetFromJsonAsync<IEnumerable<CommentDto>>(url);
+            var comments = await httpClient.GetFromJsonAsync<IEnumerable<CommentDto>>(url);
             return comments ?? Enumerable.Empty<CommentDto>();
         }
 
         public async Task<CommentDto> GetByIdAsync(int id)
         {
-            var comment = await _httpClient.GetFromJsonAsync<CommentDto>($"api/comments/{id}");
+            var comment = await httpClient.GetFromJsonAsync<CommentDto>($"api/comments/{id}");
             if (comment == null)
             {
                 throw new Exception($"Comment with ID {id} not found.");
@@ -43,13 +43,13 @@ public class CommentService
 
         public async Task UpdateAsync(int id, UpdateCommentDto dto)
         {
-            var response = await _httpClient.PutAsJsonAsync($"api/comments/{id}", dto);
+            var response = await httpClient.PutAsJsonAsync($"api/comments/{id}", dto);
             response.EnsureSuccessStatusCode();
         }
 
         public async Task DeleteAsync(int id)
         {
-            var response = await _httpClient.DeleteAsync($"api/comments/{id}");
+            var response = await httpClient.DeleteAsync($"api/comments/{id}");
             response.EnsureSuccessStatusCode();
         }
     }

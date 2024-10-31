@@ -1,16 +1,20 @@
 ﻿using ApiContracts;
+using BlazorApp.Services;
 using Microsoft.AspNetCore.Mvc;
+using RepositoryContracts;
 
 
 namespace WebAPI.Controllers;
+[ApiController]
+[Route("api/[controller]")]
 
 public class PostsController : ControllerBase
 {
-    private readonly IPostService _postService;
+    private readonly IPostRepository postRepo;
 
-    public PostsController(IPostService postService)
+    public PostsController(IPostRepository postRepo)
     {
-        _postService = postService;
+        this.postRepo = postRepo;
     }
 
     [HttpPost]
@@ -18,7 +22,7 @@ public class PostsController : ControllerBase
     {
         try
         {
-            var created = await _postService.CreateAsync(dto);
+            var created = await postRepo.CreateAsync(dto);
             return Created($"/api/posts/{created.Id}", created);
         }
         catch (Exception e)
@@ -32,7 +36,7 @@ public class PostsController : ControllerBase
     {
         try
         {
-            var posts = await _postService.GetAsync(title);
+            var posts = await postRepo.GetAsync(title);
             return Ok(posts);
         }
         catch (Exception e)
@@ -41,7 +45,6 @@ public class PostsController : ControllerBase
         }
     }
 
-    // Implement other CRUD methods (GetById, Update, Delete) similar to the above
+   
 }
     
-}

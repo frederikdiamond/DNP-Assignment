@@ -1,16 +1,20 @@
 ﻿using ApiContracts;
+using BlazorApp.Services;
 using Microsoft.AspNetCore.Mvc;
+using RepositoryContracts;
 
 
 namespace WebAPI.Controllers;
+[ApiController]
+[Route("api/[controller]")]
 
 public class CommentsController : ControllerBase
 {
-    private readonly ICommentService _commentService;
+    private readonly ICommentRepository commentRepo;
 
-    public CommentsController(ICommentService commentService)
+    public CommentsController(ICommentRepository commentRepo)
     {
-        _commentService = commentService;
+        this.commentRepo = commentRepo;
     }
 
     [HttpPost]
@@ -18,7 +22,7 @@ public class CommentsController : ControllerBase
     {
         try
         {
-            var created = await _commentService.CreateAsync(dto);
+            var created = await commentRepo.CreateAsync(dto);
             return Created($"/api/comments/{created.Id}", created);
         }
         catch (Exception e)
@@ -32,7 +36,7 @@ public class CommentsController : ControllerBase
     {
         try
         {
-            var comments = await _commentService.GetAsync(authorUsername);
+            var comments = await commentRepo.GetAsync(authorUsername);
             return Ok(comments);
         }
         catch (Exception e)

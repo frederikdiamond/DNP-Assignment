@@ -1,15 +1,20 @@
 ﻿using ApiContracts;
+using BlazorApp.Services;
 using Microsoft.AspNetCore.Mvc;
+using RepositoryContracts;
 
 namespace WebAPI.Controllers;
 
+[ApiController]
+[Route("api/[controller]")]
+
 public class UserController : ControllerBase
 {
-    private readonly IUserService _userService;
+    private readonly IUserRepository userRepo; 
 
-    public UsersController(IUserService userService)
+    public UserController(IUserRepository userRepo)
     {
-        _userService = userService;
+       this.userRepo = userRepo;
     }
 
     [HttpPost]
@@ -17,7 +22,7 @@ public class UserController : ControllerBase
     {
         try
         {
-            var created = await _userService.CreateAsync(dto);
+            var created = await userRepo.CreateAsync(dto);
             return Created($"/api/users/{created.Id}", created);
         }
         catch (Exception e)
@@ -31,7 +36,7 @@ public class UserController : ControllerBase
     {
         try
         {
-            var users = await _userService.GetAsync(username);
+            var users = await userRepo.GetAsync(username);
             return Ok(users);
         }
         catch (Exception e)
