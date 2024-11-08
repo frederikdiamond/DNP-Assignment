@@ -1,6 +1,7 @@
 using ApiContracts.DTOs;
 using Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using RepositoryContracts;
 
 [ApiController]
@@ -77,7 +78,7 @@ public class ReactionsController : ControllerBase
         if (commentId.HasValue)
             query = query.Where(r => r.CommentId == commentId.Value);
 
-        var reactions = query
+        var reactions = await query
             .Select(r => new ReactionDto
             {
                 Id = r.Id,
@@ -88,9 +89,9 @@ public class ReactionsController : ControllerBase
                 UpvoteCounter = r.UpvoteCounter,
                 DownvoteCounter = r.DownvoteCounter
             })
-            .ToList();
+            .ToListAsync();
 
-        return Ok(reactions);
+        return reactions;
     }
     
     [HttpGet("summary/post/{postId}")]

@@ -22,3 +22,4 @@ C:/Documents/IntelliJ work/DNP-Assignment/Entities/obj/Debug/net8.0/ref/Entities
 /Users/unknownuser/dev_projects/school/DNP-Assignment/Entities/obj/Debug/net8.0/refint/Entities.dll
 /Users/unknownuser/dev_projects/school/DNP-Assignment/Entities/obj/Debug/net8.0/Entities.pdb
 /Users/unknownuser/dev_projects/school/DNP-Assignment/Entities/obj/Debug/net8.0/ref/Entities.dll
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Entities/obj/Debug/net8.0/Entities.csproj.AssemblyReference.cache

@@ -87,3 +87,11 @@ C:/Documents/IntelliJ work/DNP-Assignment/WebAPI/obj/Debug/net8.0/ref/WebAPI.dll
 /Users/unknownuser/dev_projects/school/DNP-Assignment/WebAPI/obj/Debug/net8.0/WebAPI.pdb
 /Users/unknownuser/dev_projects/school/DNP-Assignment/WebAPI/obj/Debug/net8.0/WebAPI.genruntimeconfig.cache
 /Users/unknownuser/dev_projects/school/DNP-Assignment/WebAPI/obj/Debug/net8.0/ref/WebAPI.dll
+/Users/unknownuser/dev_projects/school/DNP-Assignment/WebAPI/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.dll
+/Users/unknownuser/dev_projects/school/DNP-Assignment/WebAPI/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/unknownuser/dev_projects/school/DNP-Assignment/WebAPI/bin/Debug/net8.0/Microsoft.Extensions.Caching.Memory.dll
+/Users/unknownuser/dev_projects/school/DNP-Assignment/WebAPI/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/unknownuser/dev_projects/school/DNP-Assignment/WebAPI/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/unknownuser/dev_projects/school/DNP-Assignment/WebAPI/bin/Debug/net8.0/Microsoft.Extensions.Logging.dll
+/Users/unknownuser/dev_projects/school/DNP-Assignment/WebAPI/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/unknownuser/dev_projects/school/DNP-Assignment/WebAPI/bin/Debug/net8.0/Microsoft.Extensions.Options.dll

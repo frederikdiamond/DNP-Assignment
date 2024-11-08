@@ -1,8 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "ZtNANiMfYxn45MDdPSntQljkeN05lDmhbam7DJMjstz5iVxq/j5SxB0GdfqavrsmhoWkLWqkymaDVs1ug42Hdw==",
+  "dgSpecHash": "JgO0GeOTnG+vA6dbCW6W3o/OXbvjFeTT2FxJuA0YS+L0p0JgIE88jOvwQEyaTIwktGtnX56XX3uUxnIz9m3YGA==",
   "success": true,
   "projectFilePath": "/Users/unknownuser/dev_projects/school/DNP-Assignment/ApiContracts/ApiContracts.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/unknownuser/.nuget/packages/microsoft.entityframeworkcore/8.0.10/microsoft.entityframeworkcore.8.0.10.nupkg.sha512",
+    "/Users/unknownuser/.nuget/packages/microsoft.entityframeworkcore.abstractions/8.0.10/microsoft.entityframeworkcore.abstractions.8.0.10.nupkg.sha512",
+    "/Users/unknownuser/.nuget/packages/microsoft.entityframeworkcore.analyzers/8.0.10/microsoft.entityframeworkcore.analyzers.8.0.10.nupkg.sha512",
+    "/Users/unknownuser/.nuget/packages/microsoft.extensions.caching.abstractions/8.0.0/microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
+    "/Users/unknownuser/.nuget/packages/microsoft.extensions.caching.memory/8.0.1/microsoft.extensions.caching.memory.8.0.1.nupkg.sha512",
+    "/Users/unknownuser/.nuget/packages/microsoft.extensions.dependencyinjection/8.0.1/microsoft.extensions.dependencyinjection.8.0.1.nupkg.sha512",
+    "/Users/unknownuser/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.2/microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "/Users/unknownuser/.nuget/packages/microsoft.extensions.logging/8.0.1/microsoft.extensions.logging.8.0.1.nupkg.sha512",
+    "/Users/unknownuser/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.2/microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
+    "/Users/unknownuser/.nuget/packages/microsoft.extensions.options/8.0.2/microsoft.extensions.options.8.0.2.nupkg.sha512",
+    "/Users/unknownuser/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

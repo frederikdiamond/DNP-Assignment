@@ -1,8 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "34+x0BAKTrcWUXBLn+qgO18kouiHwDXzqgzwBSZHWXOM19b11NLgPXZuKFfb+CmSFdj63JYhXK9Wfz6cOboYeg==",
+  "dgSpecHash": "l0O9ilplXPAXsYH8Qp9zkAWnxriSgkSYHW1Asqbn7FiDTcLtjzHVXqDQqDfZ/8AY1NDBnhvQ90MPqBobcwZ6Ag==",
   "success": true,
   "projectFilePath": "/Users/unknownuser/dev_projects/school/DNP-Assignment/InMemoryRepositories/InMemoryRepositories.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/unknownuser/.nuget/packages/microsoft.entityframeworkcore/8.0.10/microsoft.entityframeworkcore.8.0.10.nupkg.sha512",
+    "/Users/unknownuser/.nuget/packages/microsoft.entityframeworkcore.abstractions/8.0.10/microsoft.entityframeworkcore.abstractions.8.0.10.nupkg.sha512",
+    "/Users/unknownuser/.nuget/packages/microsoft.entityframeworkcore.analyzers/8.0.10/microsoft.entityframeworkcore.analyzers.8.0.10.nupkg.sha512",
+    "/Users/unknownuser/.nuget/packages/microsoft.extensions.caching.abstractions/8.0.0/microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
+    "/Users/unknownuser/.nuget/packages/microsoft.extensions.caching.memory/8.0.1/microsoft.extensions.caching.memory.8.0.1.nupkg.sha512",
+    "/Users/unknownuser/.nuget/packages/microsoft.extensions.dependencyinjection/8.0.1/microsoft.extensions.dependencyinjection.8.0.1.nupkg.sha512",
+    "/Users/unknownuser/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.2/microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "/Users/unknownuser/.nuget/packages/microsoft.extensions.logging/8.0.1/microsoft.extensions.logging.8.0.1.nupkg.sha512",
+    "/Users/unknownuser/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.2/microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
+    "/Users/unknownuser/.nuget/packages/microsoft.extensions.options/8.0.2/microsoft.extensions.options.8.0.2.nupkg.sha512",
+    "/Users/unknownuser/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
