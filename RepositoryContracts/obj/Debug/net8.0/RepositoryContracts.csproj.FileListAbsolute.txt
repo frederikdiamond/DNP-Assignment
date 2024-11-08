@@ -1,0 +1,16 @@
+C:\Documents\IntelliJ work\DNP-Assignment\RepositoryContracts\bin\Debug\net8.0\RepositoryContracts.deps.json
+C:\Documents\IntelliJ work\DNP-Assignment\RepositoryContracts\bin\Debug\net8.0\RepositoryContracts.dll
+C:\Documents\IntelliJ work\DNP-Assignment\RepositoryContracts\bin\Debug\net8.0\RepositoryContracts.pdb
+C:\Documents\IntelliJ work\DNP-Assignment\RepositoryContracts\bin\Debug\net8.0\Entities.dll
+C:\Documents\IntelliJ work\DNP-Assignment\RepositoryContracts\bin\Debug\net8.0\Entities.pdb
+C:\Documents\IntelliJ work\DNP-Assignment\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.csproj.AssemblyReference.cache
+C:\Documents\IntelliJ work\DNP-Assignment\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Documents\IntelliJ work\DNP-Assignment\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.AssemblyInfoInputs.cache
+C:\Documents\IntelliJ work\DNP-Assignment\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.AssemblyInfo.cs
+C:\Documents\IntelliJ work\DNP-Assignment\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.csproj.CoreCompileInputs.cache
+C:\Documents\IntelliJ work\DNP-Assignment\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.sourcelink.json
+C:\Documents\IntelliJ work\DNP-Assignment\RepositoryContracts\obj\Debug\net8.0\Reposito.28D4BA81.Up2Date
+C:\Documents\IntelliJ work\DNP-Assignment\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.dll
+C:\Documents\IntelliJ work\DNP-Assignment\RepositoryContracts\obj\Debug\net8.0\refint\RepositoryContracts.dll
+C:\Documents\IntelliJ work\DNP-Assignment\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.pdb
+C:\Documents\IntelliJ work\DNP-Assignment\RepositoryContracts\obj\Debug\net8.0\ref\RepositoryContracts.dll

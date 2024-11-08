@@ -1,0 +1,7 @@
+C:\Documents\IntelliJ work\DNP-Assignment\Client\BlazorApp\obj\Debug\net8.0\BlazorApp.csproj.AssemblyReference.cache
+C:\Documents\IntelliJ work\DNP-Assignment\Client\BlazorApp\obj\Debug\net8.0\BlazorApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Documents\IntelliJ work\DNP-Assignment\Client\BlazorApp\obj\Debug\net8.0\BlazorApp.AssemblyInfoInputs.cache
+C:\Documents\IntelliJ work\DNP-Assignment\Client\BlazorApp\obj\Debug\net8.0\BlazorApp.AssemblyInfo.cs
+C:\Documents\IntelliJ work\DNP-Assignment\Client\BlazorApp\obj\Debug\net8.0\BlazorApp.csproj.CoreCompileInputs.cache
+C:\Documents\IntelliJ work\DNP-Assignment\Client\BlazorApp\obj\Debug\net8.0\BlazorApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Documents\IntelliJ work\DNP-Assignment\Client\BlazorApp\obj\Debug\net8.0\BlazorApp.sourcelink.json
