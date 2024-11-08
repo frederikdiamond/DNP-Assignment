@@ -7,64 +7,96 @@ using System.Net.Http.Json;
 
 public class HttpUserService : IUserService
 {
-    private readonly HttpClient httpClient;
+    private readonly HttpClient client;
+    private readonly JsonSerializerOptions jsonOptions;
 
-    public HttpUserService(HttpClient httpClient)
+    public HttpUserService(HttpClient client)
     {
-        this.httpClient = httpClient;
-    }
-
-    public async Task<UserDto> CreateAsync(CreateUserDto dto)
-    {
-        var response = await httpClient.PostAsJsonAsync("api/users", dto);
-        response.EnsureSuccessStatusCode();
-        return await response.Content.ReadFromJsonAsync<UserDto>()!;
-    }
-
-    public async Task<IEnumerable<UserDto>> GetAsync(string? username)
-    {
-        var url = "api/users";
-        if (!string.IsNullOrEmpty(username))
+        this.client = client;
+        
+        this.jsonOptions = new JsonSerializerOptions
         {
-            url += $"?username={username}";
+            PropertyNameCaseInsensitive = true,
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+        };
+    }
+
+    public async Task<UserDto> CreateAsync(CreateUserDto request)
+    {
+        try
+        {
+            var response = await client.PostAsJsonAsync("Users", request, jsonOptions);
+            response.EnsureSuccessStatusCode();
+            return await response.Content.ReadFromJsonAsync<UserDto>(jsonOptions) 
+                   ?? throw new ApplicationException("Failed to deserialize user response");
         }
-        var users = await httpClient.GetFromJsonAsync<IEnumerable<UserDto>>(url);
-        return users ?? Enumerable.Empty<UserDto>();
+        catch (HttpRequestException ex)
+        {
+            throw new ApplicationException($"Error creating user: {ex.Message}", ex);
+        }
     }
 
     public async Task<UserDto> GetByIdAsync(int id)
     {
-        var user = await httpClient.GetFromJsonAsync<UserDto>($"api/users/{id}");
-        if (user == null)
+        try
         {
-            throw new Exception($"User with ID {id} not found.");
+            var response = await client.GetAsync($"Users/{id}");
+            response.EnsureSuccessStatusCode();
+            return await response.Content.ReadFromJsonAsync<UserDto>(jsonOptions) 
+                   ?? throw new ApplicationException($"Failed to retrieve user with ID {id}");
         }
-        return user;
+        catch (HttpRequestException ex)
+        {
+            throw new ApplicationException($"Error retrieving user {id}: {ex.Message}", ex);
+        }
+    }
+    
+    public async Task<IEnumerable<UserDto>> GetManyAsync(string? username = null)
+    {
+        try
+        {
+            var url = "Users";
+            if (!string.IsNullOrWhiteSpace(username))
+            {
+                url += $"?username={Uri.EscapeDataString(username)}";
+            }
+
+            var response = await client.GetAsync(url);
+            response.EnsureSuccessStatusCode();
+            return await response.Content.ReadFromJsonAsync<IEnumerable<UserDto>>(jsonOptions) 
+                   ?? throw new ApplicationException("Failed to retrieve users");
+        }
+        catch (HttpRequestException ex)
+        {
+            throw new ApplicationException($"Error retrieving users: {ex.Message}", ex);
+        }
     }
 
-    public async Task UpdateAsync(int id, UpdateUserDto dto)
+    public async Task<UserDto> UpdateAsync(int id, UpdateUserDto request)
     {
-        var response = await httpClient.PutAsJsonAsync($"api/users/{id}", dto);
-        response.EnsureSuccessStatusCode();
+        try
+        {
+            var response = await client.PutAsJsonAsync($"Users/{id}", request, jsonOptions);
+            response.EnsureSuccessStatusCode();
+            return await response.Content.ReadFromJsonAsync<UserDto>(jsonOptions) 
+                   ?? throw new ApplicationException($"Failed to update user with ID {id}");
+        }
+        catch (HttpRequestException ex)
+        {
+            throw new ApplicationException($"Error updating user {id}: {ex.Message}", ex);
+        }
     }
 
     public async Task DeleteAsync(int id)
     {
-        var response = await httpClient.DeleteAsync($"api/users/{id}");
-        response.EnsureSuccessStatusCode();
-    }
-    
-    public async Task<UserDto> AddUserAsync(CreateUserDto request)
-    {
-        HttpResponseMessage httpResponse = await client.PostAsJsonAsync("users", request);
-        string response = await httpResponse.Content.ReadAsStringAsync();
-        if (!httpResponse.IsSuccessStatusCode)
+        try
         {
-            throw new Exception(response);
+            var response = await client.DeleteAsync($"Users/{id}");
+            response.EnsureSuccessStatusCode();
         }
-        return JsonSerializer.Deserialize<UserDto>(response, new JsonSerializerOptions
+        catch (HttpRequestException ex)
         {
-            PropertyNameCaseInsensitive = true
-        })!;
+            throw new ApplicationException($"Error deleting user {id}: {ex.Message}", ex);
+        }
     }
 }

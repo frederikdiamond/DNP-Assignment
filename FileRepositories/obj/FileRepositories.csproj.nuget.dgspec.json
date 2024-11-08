@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Documents\\IntelliJ work\\DNP-Assignment\\FileRepositories\\FileRepositories.csproj": {}
+    "/Users/unknownuser/dev_projects/school/DNP-Assignment/FileRepositories/FileRepositories.csproj": {}
   },
   "projects": {
-    "C:\\Documents\\IntelliJ work\\DNP-Assignment\\Entities\\Entities.csproj": {
+    "/Users/unknownuser/dev_projects/school/DNP-Assignment/Entities/Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\Entities\\Entities.csproj",
+        "projectUniqueName": "/Users/unknownuser/dev_projects/school/DNP-Assignment/Entities/Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\45257\\.nuget\\packages\\",
-        "outputPath": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\Entities\\obj\\",
+        "projectPath": "/Users/unknownuser/dev_projects/school/DNP-Assignment/Entities/Entities.csproj",
+        "packagesPath": "/Users/unknownuser/.nuget/packages/",
+        "outputPath": "/Users/unknownuser/dev_projects/school/DNP-Assignment/Entities/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\45257\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/unknownuser/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -58,21 +53,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Documents\\IntelliJ work\\DNP-Assignment\\FileRepositories\\FileRepositories.csproj": {
+    "/Users/unknownuser/dev_projects/school/DNP-Assignment/FileRepositories/FileRepositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\FileRepositories\\FileRepositories.csproj",
+        "projectUniqueName": "/Users/unknownuser/dev_projects/school/DNP-Assignment/FileRepositories/FileRepositories.csproj",
         "projectName": "FileRepositories",
-        "projectPath": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\FileRepositories\\FileRepositories.csproj",
-        "packagesPath": "C:\\Users\\45257\\.nuget\\packages\\",
-        "outputPath": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\FileRepositories\\obj\\",
+        "projectPath": "/Users/unknownuser/dev_projects/school/DNP-Assignment/FileRepositories/FileRepositories.csproj",
+        "packagesPath": "/Users/unknownuser/.nuget/packages/",
+        "outputPath": "/Users/unknownuser/dev_projects/school/DNP-Assignment/FileRepositories/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\45257\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/unknownuser/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -84,8 +79,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Documents\\IntelliJ work\\DNP-Assignment\\RepositoryContracts\\RepositoryContracts.csproj": {
-                "projectPath": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\RepositoryContracts\\RepositoryContracts.csproj"
+              "/Users/unknownuser/dev_projects/school/DNP-Assignment/RepositoryContracts/RepositoryContracts.csproj": {
+                "projectPath": "/Users/unknownuser/dev_projects/school/DNP-Assignment/RepositoryContracts/RepositoryContracts.csproj"
               }
             }
           }
@@ -94,11 +89,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -120,21 +110,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Documents\\IntelliJ work\\DNP-Assignment\\RepositoryContracts\\RepositoryContracts.csproj": {
+    "/Users/unknownuser/dev_projects/school/DNP-Assignment/RepositoryContracts/RepositoryContracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\RepositoryContracts\\RepositoryContracts.csproj",
+        "projectUniqueName": "/Users/unknownuser/dev_projects/school/DNP-Assignment/RepositoryContracts/RepositoryContracts.csproj",
         "projectName": "RepositoryContracts",
-        "projectPath": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\RepositoryContracts\\RepositoryContracts.csproj",
-        "packagesPath": "C:\\Users\\45257\\.nuget\\packages\\",
-        "outputPath": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\RepositoryContracts\\obj\\",
+        "projectPath": "/Users/unknownuser/dev_projects/school/DNP-Assignment/RepositoryContracts/RepositoryContracts.csproj",
+        "packagesPath": "/Users/unknownuser/.nuget/packages/",
+        "outputPath": "/Users/unknownuser/dev_projects/school/DNP-Assignment/RepositoryContracts/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\45257\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/unknownuser/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -146,8 +136,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Documents\\IntelliJ work\\DNP-Assignment\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\Entities\\Entities.csproj"
+              "/Users/unknownuser/dev_projects/school/DNP-Assignment/Entities/Entities.csproj": {
+                "projectPath": "/Users/unknownuser/dev_projects/school/DNP-Assignment/Entities/Entities.csproj"
               }
             }
           }
@@ -156,11 +146,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -182,7 +167,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

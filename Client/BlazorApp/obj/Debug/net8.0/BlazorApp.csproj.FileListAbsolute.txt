@@ -1,7 +1,41 @@
-C:\Documents\IntelliJ work\DNP-Assignment\Client\BlazorApp\obj\Debug\net8.0\BlazorApp.csproj.AssemblyReference.cache
-C:\Documents\IntelliJ work\DNP-Assignment\Client\BlazorApp\obj\Debug\net8.0\BlazorApp.GeneratedMSBuildEditorConfig.editorconfig
-C:\Documents\IntelliJ work\DNP-Assignment\Client\BlazorApp\obj\Debug\net8.0\BlazorApp.AssemblyInfoInputs.cache
-C:\Documents\IntelliJ work\DNP-Assignment\Client\BlazorApp\obj\Debug\net8.0\BlazorApp.AssemblyInfo.cs
-C:\Documents\IntelliJ work\DNP-Assignment\Client\BlazorApp\obj\Debug\net8.0\BlazorApp.csproj.CoreCompileInputs.cache
-C:\Documents\IntelliJ work\DNP-Assignment\Client\BlazorApp\obj\Debug\net8.0\BlazorApp.MvcApplicationPartsAssemblyInfo.cache
-C:\Documents\IntelliJ work\DNP-Assignment\Client\BlazorApp\obj\Debug\net8.0\BlazorApp.sourcelink.json
+C:/Documents/IntelliJ work/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/BlazorApp.csproj.AssemblyReference.cache
+C:/Documents/IntelliJ work/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/BlazorApp.GeneratedMSBuildEditorConfig.editorconfig
+C:/Documents/IntelliJ work/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/BlazorApp.AssemblyInfoInputs.cache
+C:/Documents/IntelliJ work/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/BlazorApp.AssemblyInfo.cs
+C:/Documents/IntelliJ work/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/BlazorApp.csproj.CoreCompileInputs.cache
+C:/Documents/IntelliJ work/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/BlazorApp.MvcApplicationPartsAssemblyInfo.cache
+C:/Documents/IntelliJ work/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/BlazorApp.sourcelink.json
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/bin/Debug/net8.0/appsettings.Development.json
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/bin/Debug/net8.0/appsettings.json
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/bin/Debug/net8.0/BlazorApp.staticwebassets.runtime.json
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/bin/Debug/net8.0/BlazorApp
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/bin/Debug/net8.0/BlazorApp.deps.json
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/bin/Debug/net8.0/BlazorApp.runtimeconfig.json
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/bin/Debug/net8.0/BlazorApp.dll
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/bin/Debug/net8.0/BlazorApp.pdb
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/bin/Debug/net8.0/ApiContracts.dll
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/bin/Debug/net8.0/ApiContracts.pdb
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/BlazorApp.csproj.AssemblyReference.cache
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/BlazorApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/BlazorApp.AssemblyInfoInputs.cache
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/BlazorApp.AssemblyInfo.cs
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/BlazorApp.csproj.CoreCompileInputs.cache
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/BlazorApp.MvcApplicationPartsAssemblyInfo.cache
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/BlazorApp.sourcelink.json
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/staticwebassets.build.json
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/staticwebassets.development.json
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/staticwebassets/msbuild.BlazorApp.Microsoft.AspNetCore.StaticWebAssets.props
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/staticwebassets/msbuild.build.BlazorApp.props
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.BlazorApp.props
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.BlazorApp.props
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/staticwebassets.pack.json
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/scopedcss/Components/Layout/MainLayout.razor.rz.scp.css
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/scopedcss/Components/Layout/NavMenu.razor.rz.scp.css
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/scopedcss/bundle/BlazorApp.styles.css
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/scopedcss/projectbundle/BlazorApp.bundle.scp.css
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/BlazorApp.csproj.Up2Date
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/BlazorApp.dll
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/refint/BlazorApp.dll
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/BlazorApp.pdb
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/BlazorApp.genruntimeconfig.cache
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/ref/BlazorApp.dll

@@ -1,12 +1,24 @@
-C:\Documents\IntelliJ work\DNP-Assignment\ApiContracts\bin\Debug\net8.0\ApiContracts.deps.json
-C:\Documents\IntelliJ work\DNP-Assignment\ApiContracts\bin\Debug\net8.0\ApiContracts.dll
-C:\Documents\IntelliJ work\DNP-Assignment\ApiContracts\bin\Debug\net8.0\ApiContracts.pdb
-C:\Documents\IntelliJ work\DNP-Assignment\ApiContracts\obj\Debug\net8.0\ApiContracts.GeneratedMSBuildEditorConfig.editorconfig
-C:\Documents\IntelliJ work\DNP-Assignment\ApiContracts\obj\Debug\net8.0\ApiContracts.AssemblyInfoInputs.cache
-C:\Documents\IntelliJ work\DNP-Assignment\ApiContracts\obj\Debug\net8.0\ApiContracts.AssemblyInfo.cs
-C:\Documents\IntelliJ work\DNP-Assignment\ApiContracts\obj\Debug\net8.0\ApiContracts.csproj.CoreCompileInputs.cache
-C:\Documents\IntelliJ work\DNP-Assignment\ApiContracts\obj\Debug\net8.0\ApiContracts.sourcelink.json
-C:\Documents\IntelliJ work\DNP-Assignment\ApiContracts\obj\Debug\net8.0\ApiContracts.dll
-C:\Documents\IntelliJ work\DNP-Assignment\ApiContracts\obj\Debug\net8.0\refint\ApiContracts.dll
-C:\Documents\IntelliJ work\DNP-Assignment\ApiContracts\obj\Debug\net8.0\ApiContracts.pdb
-C:\Documents\IntelliJ work\DNP-Assignment\ApiContracts\obj\Debug\net8.0\ref\ApiContracts.dll
+C:/Documents/IntelliJ work/DNP-Assignment/ApiContracts/bin/Debug/net8.0/ApiContracts.deps.json
+C:/Documents/IntelliJ work/DNP-Assignment/ApiContracts/bin/Debug/net8.0/ApiContracts.dll
+C:/Documents/IntelliJ work/DNP-Assignment/ApiContracts/bin/Debug/net8.0/ApiContracts.pdb
+C:/Documents/IntelliJ work/DNP-Assignment/ApiContracts/obj/Debug/net8.0/ApiContracts.GeneratedMSBuildEditorConfig.editorconfig
+C:/Documents/IntelliJ work/DNP-Assignment/ApiContracts/obj/Debug/net8.0/ApiContracts.AssemblyInfoInputs.cache
+C:/Documents/IntelliJ work/DNP-Assignment/ApiContracts/obj/Debug/net8.0/ApiContracts.AssemblyInfo.cs
+C:/Documents/IntelliJ work/DNP-Assignment/ApiContracts/obj/Debug/net8.0/ApiContracts.csproj.CoreCompileInputs.cache
+C:/Documents/IntelliJ work/DNP-Assignment/ApiContracts/obj/Debug/net8.0/ApiContracts.sourcelink.json
+C:/Documents/IntelliJ work/DNP-Assignment/ApiContracts/obj/Debug/net8.0/ApiContracts.dll
+C:/Documents/IntelliJ work/DNP-Assignment/ApiContracts/obj/Debug/net8.0/refint/ApiContracts.dll
+C:/Documents/IntelliJ work/DNP-Assignment/ApiContracts/obj/Debug/net8.0/ApiContracts.pdb
+C:/Documents/IntelliJ work/DNP-Assignment/ApiContracts/obj/Debug/net8.0/ref/ApiContracts.dll
+/Users/unknownuser/dev_projects/school/DNP-Assignment/ApiContracts/bin/Debug/net8.0/ApiContracts.deps.json
+/Users/unknownuser/dev_projects/school/DNP-Assignment/ApiContracts/bin/Debug/net8.0/ApiContracts.dll
+/Users/unknownuser/dev_projects/school/DNP-Assignment/ApiContracts/bin/Debug/net8.0/ApiContracts.pdb
+/Users/unknownuser/dev_projects/school/DNP-Assignment/ApiContracts/obj/Debug/net8.0/ApiContracts.GeneratedMSBuildEditorConfig.editorconfig
+/Users/unknownuser/dev_projects/school/DNP-Assignment/ApiContracts/obj/Debug/net8.0/ApiContracts.AssemblyInfoInputs.cache
+/Users/unknownuser/dev_projects/school/DNP-Assignment/ApiContracts/obj/Debug/net8.0/ApiContracts.AssemblyInfo.cs
+/Users/unknownuser/dev_projects/school/DNP-Assignment/ApiContracts/obj/Debug/net8.0/ApiContracts.csproj.CoreCompileInputs.cache
+/Users/unknownuser/dev_projects/school/DNP-Assignment/ApiContracts/obj/Debug/net8.0/ApiContracts.sourcelink.json
+/Users/unknownuser/dev_projects/school/DNP-Assignment/ApiContracts/obj/Debug/net8.0/ApiContracts.dll
+/Users/unknownuser/dev_projects/school/DNP-Assignment/ApiContracts/obj/Debug/net8.0/refint/ApiContracts.dll
+/Users/unknownuser/dev_projects/school/DNP-Assignment/ApiContracts/obj/Debug/net8.0/ApiContracts.pdb
+/Users/unknownuser/dev_projects/school/DNP-Assignment/ApiContracts/obj/Debug/net8.0/ref/ApiContracts.dll

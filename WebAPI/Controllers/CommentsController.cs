@@ -1,50 +1,104 @@
-﻿using ApiContracts;
-using BlazorApp.Services;
+using ApiContracts.DTOs;
+using Entities;
 using Microsoft.AspNetCore.Mvc;
 using RepositoryContracts;
 
-
-namespace WebAPI.Controllers;
 [ApiController]
-[Route("api/[controller]")]
-
+[Route("[controller]")]
 public class CommentsController : ControllerBase
 {
-    private readonly ICommentRepository commentRepo;
+    private readonly ICommentRepository _commentRepo;
 
     public CommentsController(ICommentRepository commentRepo)
     {
-        this.commentRepo = commentRepo;
+        _commentRepo = commentRepo;
     }
 
     [HttpPost]
-    public async Task<ActionResult<CommentDto>> CreateComment(CreateCommentDto dto)
+    public async Task<ActionResult<CommentDto>> Create([FromBody] CreateCommentDto request)
     {
-        try
+        var comment = new Comment
         {
-            var created = await commentRepo.CreateAsync(dto);
-            return Created($"/api/comments/{created.Id}", created);
-        }
-        catch (Exception e)
+            Body = request.Body,
+            PostId = request.PostId,
+            UserId = request.UserId
+        };
+
+        var created = await _commentRepo.AddAsync(comment);
+        var dto = new CommentDto
         {
-            return BadRequest(e.Message);
-        }
+            Id = created.Id,
+            Body = created.Body,
+            PostId = created.PostId,
+            UserId = created.UserId
+        };
+
+        return Created($"/Comments/{dto.Id}", dto);
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<CommentDto>> GetSingle(int id)
+    {
+        var comment = await _commentRepo.GetSingleAsync(id);
+        if (comment == null)
+            return NotFound();
+
+        return Ok(new CommentDto
+        {
+            Id = comment.Id,
+            Body = comment.Body,
+            PostId = comment.PostId,
+            UserId = comment.UserId
+        });
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<CommentDto>>> GetComments([FromQuery] string? authorUsername)
+    public ActionResult<List<CommentDto>> GetMany([FromQuery] int? postId, [FromQuery] int? userId)
     {
-        try
-        {
-            var comments = await commentRepo.GetAsync(authorUsername);
-            return Ok(comments);
-        }
-        catch (Exception e)
-        {
-            return BadRequest(e.Message);
-        }
+        var query = _commentRepo.GetMany();
+        
+        if (postId.HasValue)
+            query = query.Where(c => c.PostId == postId.Value);
+        
+        if (userId.HasValue)
+            query = query.Where(c => c.UserId == userId.Value);
+
+        var comments = query
+            .Select(c => new CommentDto
+            {
+                Id = c.Id,
+                Body = c.Body,
+                PostId = c.PostId,
+                UserId = c.UserId
+            })
+            .ToList();
+
+        return Ok(comments);
     }
 
-    
+    [HttpPut("{id}")]
+    public async Task<ActionResult<CommentDto>> Update(int id, [FromBody] UpdateCommentDto request)
+    {
+        var comment = await _commentRepo.GetSingleAsync(id);
+        if (comment == null)
+            return NotFound();
+
+        comment.Body = request.Body;
+        await _commentRepo.UpdateAsync(comment);
+
+        return Ok(new CommentDto
+        {
+            Id = comment.Id,
+            Body = comment.Body,
+            PostId = comment.PostId,
+            UserId = comment.UserId
+        });
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<ActionResult> Delete(int id)
+    {
+        await _commentRepo.DeleteAsync(id);
+        return NoContent();
+    }
 }
-    

@@ -1,56 +1,100 @@
-﻿using ApiContracts;
+﻿using System.Text.Json;
+using ApiContracts;
 
 namespace BlazorApp.Services;
 
-public class HttpCommentService
+public class HttpCommentService : ICommentService
 {
-    public class CommentService : ICommentService
+    private readonly HttpClient client;
+    private readonly JsonSerializerOptions jsonOptions;
+
+    public HttpCommentService(HttpClient client)
     {
-        private readonly HttpClient httpClient;
-
-        public CommentService(HttpClient httpClient)
+        this.client = client;
+        
+        this.jsonOptions = new JsonSerializerOptions
         {
-            this.httpClient = httpClient;
-        }
+            PropertyNameCaseInsensitive = true,
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+        };
+    }
 
-        public async Task<CommentDto> CreateAsync(CreateCommentDto dto)
+    public async Task<CommentDto> CreateAsync(CreateCommentDto request)
+    {
+        try
         {
-            var response = await httpClient.PostAsJsonAsync("api/comments", dto);
+            var response = await client.PostAsJsonAsync("Comments", request, jsonOptions);
             response.EnsureSuccessStatusCode();
-            return await response.Content.ReadFromJsonAsync<CommentDto>()!;
+            return await response.Content.ReadFromJsonAsync<CommentDto>(jsonOptions)
+                   ?? throw new ApplicationException("Failed to deserialize comment response");
         }
-
-        public async Task<IEnumerable<CommentDto>> GetAsync(string? authorUsername)
+        catch (HttpRequestException ex)
         {
-            var url = "api/comments";
-            if (!string.IsNullOrEmpty(authorUsername))
+            throw new ApplicationException($"Error creating comment: {ex.Message}", ex);
+        }
+    }
+
+    public async Task<CommentDto> GetByIdAsync(int id)
+    {
+        try
+        {
+            var response = await client.GetAsync($"Comments/{id}");
+            response.EnsureSuccessStatusCode();
+            return await response.Content.ReadFromJsonAsync<CommentDto>(jsonOptions)
+                   ?? throw new ApplicationException($"Failed to retrieve comment with ID {id}");
+        }
+        catch (HttpRequestException ex)
+        {
+            throw new ApplicationException($"Error retrieving comment {id}: {ex.Message}", ex);
+        }
+    }
+    
+    public async Task<IEnumerable<CommentDto>> GetManyAsync(string? authorUsername = null)
+    {
+        try
+        {
+            var url = "Comments";
+            if (!string.IsNullOrWhiteSpace(authorUsername))
             {
-                url += $"?authorUsername={authorUsername}";
+                url += $"?authorUsername={Uri.EscapeDataString(authorUsername)}";
             }
-            var comments = await httpClient.GetFromJsonAsync<IEnumerable<CommentDto>>(url);
-            return comments ?? Enumerable.Empty<CommentDto>();
-        }
 
-        public async Task<CommentDto> GetByIdAsync(int id)
-        {
-            var comment = await httpClient.GetFromJsonAsync<CommentDto>($"api/comments/{id}");
-            if (comment == null)
-            {
-                throw new Exception($"Comment with ID {id} not found.");
-            }
-            return comment;
+            var response = await client.GetAsync(url);
+            response.EnsureSuccessStatusCode();
+            return await response.Content.ReadFromJsonAsync<IEnumerable<CommentDto>>(jsonOptions)
+                   ?? throw new ApplicationException("Failed to retrieve comments");
         }
-
-        public async Task UpdateAsync(int id, UpdateCommentDto dto)
+        catch (HttpRequestException ex)
         {
-            var response = await httpClient.PutAsJsonAsync($"api/comments/{id}", dto);
+            throw new ApplicationException($"Error retrieving comments: {ex.Message}", ex);
+        }
+    }
+    
+    public async Task<CommentDto> UpdateAsync(int id, UpdateCommentDto request)
+    {
+        try
+        {
+            var response = await client.PutAsJsonAsync($"Comments/{id}", request, jsonOptions);
+            response.EnsureSuccessStatusCode();
+            return await response.Content.ReadFromJsonAsync<CommentDto>(jsonOptions)
+                   ?? throw new ApplicationException($"Failed to update comment with ID {id}");
+        }
+        catch (HttpRequestException ex)
+        {
+            throw new ApplicationException($"Error updating comment {id}: {ex.Message}", ex);
+        }
+    }
+
+    public async Task DeleteAsync(int id)
+    {
+        try
+        {
+            var response = await client.DeleteAsync($"Comments/{id}");
             response.EnsureSuccessStatusCode();
         }
-
-        public async Task DeleteAsync(int id)
+        catch (HttpRequestException ex)
         {
-            var response = await httpClient.DeleteAsync($"api/comments/{id}");
-            response.EnsureSuccessStatusCode();
+            throw new ApplicationException($"Error deleting comment {id}: {ex.Message}", ex);
         }
     }
 }

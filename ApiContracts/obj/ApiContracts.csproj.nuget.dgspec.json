@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Documents\\IntelliJ work\\DNP-Assignment\\ApiContracts\\ApiContracts.csproj": {}
+    "/Users/unknownuser/dev_projects/school/DNP-Assignment/ApiContracts/ApiContracts.csproj": {}
   },
   "projects": {
-    "C:\\Documents\\IntelliJ work\\DNP-Assignment\\ApiContracts\\ApiContracts.csproj": {
+    "/Users/unknownuser/dev_projects/school/DNP-Assignment/ApiContracts/ApiContracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\ApiContracts\\ApiContracts.csproj",
+        "projectUniqueName": "/Users/unknownuser/dev_projects/school/DNP-Assignment/ApiContracts/ApiContracts.csproj",
         "projectName": "ApiContracts",
-        "projectPath": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\ApiContracts\\ApiContracts.csproj",
-        "packagesPath": "C:\\Users\\45257\\.nuget\\packages\\",
-        "outputPath": "C:\\Documents\\IntelliJ work\\DNP-Assignment\\ApiContracts\\obj\\",
+        "projectPath": "/Users/unknownuser/dev_projects/school/DNP-Assignment/ApiContracts/ApiContracts.csproj",
+        "packagesPath": "/Users/unknownuser/.nuget/packages/",
+        "outputPath": "/Users/unknownuser/dev_projects/school/DNP-Assignment/ApiContracts/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\45257\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/unknownuser/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -58,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
