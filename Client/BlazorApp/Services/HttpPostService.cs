@@ -1,5 +1,6 @@
 ﻿using System.Text.Json;
 using ApiContracts;
+using ApiContracts.DTOs;
 
 namespace BlazorApp.Services;
 

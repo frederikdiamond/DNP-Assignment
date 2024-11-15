@@ -1,4 +1,4 @@
-namespace Shared.ApiContracts.DTOs
+namespace ApiContracts.DTOs
 {
     public class CreateUserDto
     {
@@ -13,5 +13,11 @@ namespace Shared.ApiContracts.DTOs
         public DateTime CreatedAt { get; set; }
         public int PostsCount { get; set; }
         public int CommentsCount { get; set; }
+    }
+    
+    public class UpdateUserDto
+    {
+        public string Username { get; set; }
+        public string Password { get; set; }
     }
 }

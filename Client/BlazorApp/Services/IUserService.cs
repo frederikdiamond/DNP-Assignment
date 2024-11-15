@@ -1,4 +1,5 @@
 ﻿using ApiContracts;
+using ApiContracts.DTOs;
 
 namespace BlazorApp.Services;
 

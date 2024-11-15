@@ -18,4 +18,12 @@ namespace ApiContracts.DTOs
         public int UpvoteCounter { get; set; }
         public int DownvoteCounter { get; set; }
     }
+    
+    public class ReactionSummaryDto
+    {
+        public int UpvoteCount { get; set; }
+        public int DownvoteCount { get; set; }
+        public int TotalCount { get; set; }
+    }
+
 }
