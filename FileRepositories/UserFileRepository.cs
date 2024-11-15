@@ -7,6 +7,10 @@ namespace FileRepositories;
 public class UserFileRepository : IUserRepository
 {
     private readonly string filePath = "users.json";
+    private readonly JsonSerializerOptions options = new()
+    {
+        WriteIndented = true
+    };
     
     public UserFileRepository()
     {
@@ -14,7 +18,27 @@ public class UserFileRepository : IUserRepository
         {
             File.WriteAllText(filePath, "[]");
         }
+        else
+        {
+            try
+            {
+                string content = File.ReadAllText(filePath);
+                if (string.IsNullOrWhiteSpace(content))
+                {
+                    File.WriteAllText(filePath, "[]");
+                }
+                else
+                {
+                    JsonSerializer.Deserialize<List<User>>(content, options);
+                }
+            }
+            catch
+            {
+                File.WriteAllText(filePath, "[]");
+            }
+        }
     }
+    
     public async Task<User> AddAsync(User user)
     {
         string userAsJson = await File.ReadAllTextAsync(filePath);

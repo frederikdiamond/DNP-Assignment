@@ -1,7 +1,8 @@
+using ApiContracts.DTOs;
 using Entities;
 using Microsoft.AspNetCore.Mvc;
 using RepositoryContracts;
-using Shared.ApiContracts.DTOs;
+using Shared.ApiContracts;
 
 [ApiController]
 [Route("[controller]")]

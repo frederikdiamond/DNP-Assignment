@@ -1,0 +1,61 @@
+@page "/register"
+@using ApiContracts.DTOs
+@using BlazorApp.Auth
+@inject HttpClient Http
+@inject NavigationManager NavMgr
+
+<div>
+    <h3>Register new user</h3>
+
+    <div class="form-group">
+        <label>Username:</label>
+        <input type="text" @bind="userName" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+        <label>Password:</label>
+        <input type="password" @bind="password" class="form-control"/>
+    </div>
+
+    @if (!string.IsNullOrEmpty(errorLabel))
+    {
+        <div class="alert alert-danger">
+            @errorLabel
+        </div>
+    }
+
+    <button @onclick="RegisterAsync" class="btn btn-primary">Register</button>
+    <button @onclick="@(() => NavMgr.NavigateTo("/login"))" class="btn btn-secondary">Back to Login</button>
+</div>
+
+@code {
+    private string userName = "";
+    private string password = "";
+    private string errorLabel = "";
+
+    private async Task RegisterAsync()
+    {
+        try
+        {
+            var response = await Http.PostAsJsonAsync("auth/register", new CreateUserDto
+            {
+                Username = userName,
+                Password = password
+            });
+
+            if (response.IsSuccessStatusCode)
+            {
+                NavMgr.NavigateTo("/login");
+            }
+            else
+            {
+                var error = await response.Content.ReadAsStringAsync();
+                errorLabel = error;
+            }
+        }
+        catch (Exception e)
+        {
+            errorLabel = e.Message;
+        }
+    }
+}

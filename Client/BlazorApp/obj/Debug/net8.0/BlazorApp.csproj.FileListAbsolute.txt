@@ -47,3 +47,9 @@ C:/Documents/IntelliJ work/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/Blaz
 /Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/bin/Debug/net8.0/Microsoft.Extensions.Logging.dll
 /Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll
 /Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/bin/Debug/net8.0/BlazorApp.staticwebassets.endpoints.json
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/staticwebassets.build.endpoints.json
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/obj/Debug/net8.0/staticwebassets/msbuild.BlazorApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/bin/Debug/net8.0/Microsoft.Extensions.Caching.Abstractions.dll
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/bin/Debug/net8.0/Microsoft.Extensions.Primitives.dll
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Client/BlazorApp/bin/Debug/net8.0/System.Diagnostics.DiagnosticSource.dll

@@ -95,3 +95,10 @@ C:/Documents/IntelliJ work/DNP-Assignment/WebAPI/obj/Debug/net8.0/ref/WebAPI.dll
 /Users/unknownuser/dev_projects/school/DNP-Assignment/WebAPI/bin/Debug/net8.0/Microsoft.Extensions.Logging.dll
 /Users/unknownuser/dev_projects/school/DNP-Assignment/WebAPI/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll
 /Users/unknownuser/dev_projects/school/DNP-Assignment/WebAPI/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
+/Users/unknownuser/dev_projects/school/DNP-Assignment/WebAPI/bin/Debug/net8.0/BlazorApp.staticwebassets.endpoints.json
+/Users/unknownuser/dev_projects/school/DNP-Assignment/WebAPI/bin/Debug/net8.0/WebAPI.staticwebassets.endpoints.json
+/Users/unknownuser/dev_projects/school/DNP-Assignment/WebAPI/obj/Debug/net8.0/staticwebassets.build.endpoints.json
+/Users/unknownuser/dev_projects/school/DNP-Assignment/WebAPI/obj/Debug/net8.0/staticwebassets/msbuild.WebAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+/Users/unknownuser/dev_projects/school/DNP-Assignment/WebAPI/bin/Debug/net8.0/Microsoft.Extensions.Caching.Abstractions.dll
+/Users/unknownuser/dev_projects/school/DNP-Assignment/WebAPI/bin/Debug/net8.0/Microsoft.Extensions.Primitives.dll
+/Users/unknownuser/dev_projects/school/DNP-Assignment/WebAPI/bin/Debug/net8.0/System.Diagnostics.DiagnosticSource.dll
