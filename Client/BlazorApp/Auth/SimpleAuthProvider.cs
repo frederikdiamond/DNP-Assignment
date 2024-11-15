@@ -2,6 +2,7 @@ using System.Security.Claims;
 using System.Text.Json;
 using ApiContracts.DTOs;
 using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.JSInterop;
 using LoginRequest = Shared.ApiContracts.Requests.LoginRequest;
 
 namespace BlazorApp.Auth;
@@ -9,18 +10,45 @@ namespace BlazorApp.Auth;
 public class SimpleAuthProvider : AuthenticationStateProvider
 {
     private readonly HttpClient httpClient;
-    private ClaimsPrincipal currentClaimsPrincipal;
+    // private ClaimsPrincipal currentClaimsPrincipal;
+    private readonly IJSRuntime jsRuntime;
 
-    public SimpleAuthProvider(HttpClient httpClient)
+    public SimpleAuthProvider(HttpClient httpClient, IJSRuntime jsRuntime)
     {
         this.httpClient = httpClient;
-        currentClaimsPrincipal = new ClaimsPrincipal(new ClaimsIdentity());
+        // currentClaimsPrincipal = new ClaimsPrincipal(new ClaimsIdentity());
+        this.jsRuntime = jsRuntime;
     }
 
-    public override Task<AuthenticationState> GetAuthenticationStateAsync()
+    public override async Task<AuthenticationState> GetAuthenticationStateAsync()
     {
-        var authState = new AuthenticationState(currentClaimsPrincipal);
-        return Task.FromResult(authState);
+        // var authState = new AuthenticationState(currentClaimsPrincipal);
+        // return Task.FromResult(authState);
+        
+        string userAsJson = "";
+        try
+        {
+            userAsJson = await jsRuntime.InvokeAsync<string>("sessionStorage.getItem", "currentUser");
+        }
+        catch (InvalidOperationException e)
+        {
+            return new AuthenticationState(new());
+        }
+
+        if (string.IsNullOrEmpty(userAsJson))
+        {
+            return new AuthenticationState(new());
+        }
+
+        UserDto userDto = JsonSerializer.Deserialize<UserDto>(userAsJson)!;
+        List<Claim> claims = new List<Claim>()
+        {
+            new Claim(ClaimTypes.Name, userDto.Username),
+            new Claim(ClaimTypes.NameIdentifier, userDto.Id.ToString()),
+        };
+        ClaimsIdentity identity = new ClaimsIdentity(claims, "apiauth");
+        ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
+        return new AuthenticationState(claimsPrincipal);
     }
     
     public async Task Login(string userName, string password)
@@ -43,7 +71,9 @@ public class SimpleAuthProvider : AuthenticationStateProvider
         {
             PropertyNameCaseInsensitive = true
         })!;
-
+        
+        string serialisedData = JsonSerializer.Serialize(userDto);
+        await jsRuntime.InvokeVoidAsync("sessionStorage.setItem", "currentUser", serialisedData);
 
         List<Claim> claims = new List<Claim>()
         {
@@ -54,16 +84,17 @@ public class SimpleAuthProvider : AuthenticationStateProvider
             new Claim("CommentsCount", userDto.CommentsCount.ToString())
         };
         ClaimsIdentity identity = new ClaimsIdentity(claims, "apiauth");
-        currentClaimsPrincipal = new ClaimsPrincipal(identity);
+        ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
 
         NotifyAuthenticationStateChanged(
-            Task.FromResult(new AuthenticationState(currentClaimsPrincipal))
+            Task.FromResult(new AuthenticationState(claimsPrincipal))
         );
     }
 
-    public void Logout()
+    public async void Logout()
     {
-        currentClaimsPrincipal = new();
-        NotifyAuthenticationStateChanged(Task.FromResult(new AuthenticationState(currentClaimsPrincipal)));
+        // currentClaimsPrincipal = new();
+        await jsRuntime.InvokeVoidAsync("sessionStorage.setItem", "currentUser", "");
+        NotifyAuthenticationStateChanged(Task.FromResult(new AuthenticationState(new())));
     }
 }
