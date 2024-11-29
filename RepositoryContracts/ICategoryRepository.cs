@@ -8,5 +8,5 @@ public interface ICategoryRepository
     Task UpdateAsync(Category category);
     Task DeleteAsync(int id);
     Task<Category> GetSingleAsync(int id);
-    IQueryable<Category> GetMany();
+    Task<IQueryable<Category>> GetManyAsync();
 }

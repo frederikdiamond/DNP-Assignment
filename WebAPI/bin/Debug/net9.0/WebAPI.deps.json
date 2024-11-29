@@ -10,6 +10,7 @@
         "dependencies": {
           "ApiContracts": "1.0.0",
           "BlazorApp": "1.0.0",
+          "EfcRepositories": "1.0.0",
           "Entities": "1.0.0",
           "FileRepositories": "1.0.0",
           "Microsoft.AspNetCore.Components.Authorization": "9.0.0",
@@ -804,6 +805,19 @@
           }
         }
       },
+      "EfcRepositories/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "9.0.0",
+          "Microsoft.EntityFrameworkCore.Sqlite": "9.0.0",
+          "RepositoryContracts": "1.0.0"
+        },
+        "runtime": {
+          "EfcRepositories.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Entities/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "9.0.0"
@@ -1259,6 +1273,11 @@
       "sha512": ""
     },
     "BlazorApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EfcRepositories/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

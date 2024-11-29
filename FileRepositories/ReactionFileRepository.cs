@@ -67,9 +67,9 @@ public class ReactionFileRepository : IReactionRepository
         return reaction;
     }
 
-    public IQueryable<Reaction> GetMany()
+    public async Task<IQueryable<Reaction>> GetManyAsync()
     {
-        string reactionsAsJson = File.ReadAllTextAsync(filePath).Result;
+        string reactionsAsJson = await File.ReadAllTextAsync(filePath);
         List<Reaction> reactions = JsonSerializer.Deserialize<List<Reaction>>(reactionsAsJson)!;
         return reactions.AsQueryable();
     }

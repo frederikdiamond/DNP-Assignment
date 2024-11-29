@@ -1,6 +1,7 @@
 using ApiContracts.DTOs;
 using Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using RepositoryContracts;
 
 [ApiController]
@@ -57,9 +58,10 @@ public class PostsController : ControllerBase
         if (post == null)
             return NotFound();
 
-        var reactions = _reactionRepo.GetMany()
+        var reactionsQuery = await _reactionRepo.GetManyAsync();
+        var reactions = await reactionsQuery
             .Where(r => r.PostId == id)
-            .ToList();
+            .ToListAsync();
 
         var dto = new PostDto
         {
@@ -94,18 +96,19 @@ public class PostsController : ControllerBase
             query = query.Where(p => p.UserId == userId.Value);
         }
         
-        var posts = query.ToList();
+        var posts = await query.ToListAsync();
 
         if (orderByVotes)
         {
-            var postReactions = _reactionRepo.GetMany()
+            var votesQuery = await _reactionRepo.GetManyAsync();
+            var postReactions = await votesQuery
                 .GroupBy(r => r.PostId)
                 .Select(g => new 
                 { 
                     PostId = g.Key, 
                     VoteCount = g.Sum(r => r.UpvoteCounter - r.DownvoteCounter)
                 })
-                .ToList();
+                .ToListAsync();
 
             posts = posts
                 .GroupJoin(
@@ -127,9 +130,10 @@ public class PostsController : ControllerBase
             posts = posts.Take(top.Value).ToList();
         }
 
-        var allReactions = _reactionRepo.GetMany()
+        var reactionQuery = await _reactionRepo.GetManyAsync();
+        var allReactions = await reactionQuery
             .Where(r => posts.Select(p => p.PostId).Contains(r.PostId))
-            .ToList();
+            .ToListAsync();
 
         var dtos = posts.Select(p =>
         {
@@ -146,7 +150,7 @@ public class PostsController : ControllerBase
             };
         }).ToList();
 
-        return Ok(posts);
+        return dtos;
     }
     
     [HttpPut("{id}")]
@@ -161,9 +165,10 @@ public class PostsController : ControllerBase
 
         await _postRepo.UpdateAsync(post);
 
-        var reactions = _reactionRepo.GetMany()
+        var reactionsQuery = await _reactionRepo.GetManyAsync();
+        var reactions = await reactionsQuery
             .Where(r => r.PostId == id)
-            .ToList();
+            .ToListAsync();
 
         return Ok(new PostDto
         {

@@ -53,7 +53,7 @@ public class UsersController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<List<UserDto>>> GetMany([FromQuery] string? username)
     {
-        var query = await _userRepo.GetMany();
+        var query = await _userRepo.GetManyAsync();
         if (!string.IsNullOrWhiteSpace(username))
         {
             query = query.Where(u => u.Username.Contains(username));

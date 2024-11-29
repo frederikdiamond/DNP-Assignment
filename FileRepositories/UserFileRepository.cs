@@ -93,7 +93,7 @@ public class UserFileRepository : IUserRepository
         return users.FirstOrDefault(u => u.Id == id);
     }
 
-    public async Task<IQueryable<User>> GetMany()
+    public async Task<IQueryable<User>> GetManyAsync()
     {
         string usersAsJson = await File.ReadAllTextAsync(filePath);
         List<User> users = JsonSerializer.Deserialize<List<User>>(usersAsJson) ?? new List<User>();

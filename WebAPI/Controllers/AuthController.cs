@@ -19,7 +19,7 @@ public class AuthController : ControllerBase
     [HttpPost("login")]
     public async Task<ActionResult<UserDto>> Login([FromBody] LoginRequest loginRequest)
     {
-        var users = await _userRepository.GetMany();
+        var users = await _userRepository.GetManyAsync();
         var user = users.FirstOrDefault(u => u.Username == loginRequest.Username);
         
         // Checking if user exists
@@ -46,7 +46,7 @@ public class AuthController : ControllerBase
     [HttpPost("register")]
     public async Task<ActionResult<UserDto>> Register([FromBody] CreateUserDto createUserDto)
     {
-        var users = await _userRepository.GetMany();
+        var users = await _userRepository.GetManyAsync();
         
         if (users.Any(u => u.Username == createUserDto.Username))
         {
@@ -85,7 +85,7 @@ public class AuthController : ControllerBase
         // Checking if username is already taken
         if (!string.IsNullOrEmpty(updateUserDto.Username) && updateUserDto.Username != user.Username)
         {
-            var users = await _userRepository.GetMany();
+            var users = await _userRepository.GetManyAsync();
             if (users.Any(u => u.Username == updateUserDto.Username))
             {
                 return BadRequest("Username is already taken");

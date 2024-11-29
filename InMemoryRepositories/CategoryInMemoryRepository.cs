@@ -7,8 +7,6 @@ public class CategoryInMemoryRepository : ICategoryRepository
 {
     private List<Category> categories;
     
-    
-    
     public Task<Category> AddAsync(Category category)
     {
         category.Id = categories.Any() 
@@ -33,7 +31,6 @@ public class CategoryInMemoryRepository : ICategoryRepository
         return Task.CompletedTask;
     }
     
-    
     public Task DeleteAsync(int id)
     {
         Category? postToRemove = categories.SingleOrDefault(p => p.Id == id);
@@ -47,15 +44,13 @@ public class CategoryInMemoryRepository : ICategoryRepository
         return Task.CompletedTask;
     }
     
-    
     public Task<Category> GetSingleAsync(int id)
     {
         Category? category = categories.SingleOrDefault(p => p.Id == id);  
         return Task.FromResult(category);
     }
     
-    
-    public IQueryable<Category> GetMany()
+    public async Task<IQueryable<Category>> GetManyAsync()
     {
         return categories.AsQueryable();
     }

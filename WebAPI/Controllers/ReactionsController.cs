@@ -85,7 +85,7 @@ public class ReactionsController : ControllerBase
         [FromQuery] int? userId,
         [FromQuery] int? commentId)
     {
-        var query = _reactionRepo.GetMany();
+        var query = await _reactionRepo.GetManyAsync();
         
         if (postId.HasValue)
             query = query.Where(r => r.PostId == postId.Value);
@@ -113,11 +113,12 @@ public class ReactionsController : ControllerBase
     }
     
     [HttpGet("summary/post/{postId}")]
-    public ActionResult GetPostSummary(int postId)
+    public async Task<ActionResult> GetPostSummary(int postId)
     {
-        var reactions = _reactionRepo.GetMany()
+        var reactionQuery = await _reactionRepo.GetManyAsync();
+        var reactions = await reactionQuery
             .Where(r => r.PostId == postId)
-            .ToList();
+            .ToListAsync();
 
         var summary = new
         {
@@ -129,11 +130,12 @@ public class ReactionsController : ControllerBase
     }
 
     [HttpGet("summary/comment/{commentId}")]
-    public ActionResult GetCommentSummary(int commentId)
+    public async Task<ActionResult> GetCommentSummary(int commentId)
     {
-        var reactions = _reactionRepo.GetMany()
+        var reactionQuery = await _reactionRepo.GetManyAsync();
+        var reactions = await reactionQuery
             .Where(r => r.CommentId == commentId)
-            .ToList();
+            .ToListAsync();
 
         var summary = new
         {

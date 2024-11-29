@@ -1,6 +1,7 @@
 using ApiContracts.DTOs;
 using Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using RepositoryContracts;
 
 [ApiController]
@@ -74,9 +75,9 @@ public class CommentsController : ControllerBase
     }
 
     [HttpGet]
-    public ActionResult<List<CommentDto>> GetMany([FromQuery] int? postId, [FromQuery] int? userId)
+    public async Task<ActionResult<IEnumerable<CommentDto>>> GetMany([FromQuery] int? postId, [FromQuery] int? userId)
     {
-        var query = _commentRepo.GetMany();
+        var query = await _commentRepo.GetManyAsync();
         
         if (postId.HasValue)
             query = query.Where(c => c.PostId == postId.Value);
@@ -84,7 +85,7 @@ public class CommentsController : ControllerBase
         if (userId.HasValue)
             query = query.Where(c => c.UserId == userId.Value);
 
-        var comments = query
+        var comments = await query
             .Select(c => new CommentDto
             {
                 Id = c.Id,
@@ -92,9 +93,9 @@ public class CommentsController : ControllerBase
                 PostId = c.PostId,
                 UserId = c.UserId
             })
-            .ToList();
+            .ToListAsync();
 
-        return Ok(comments);
+        return comments;
     }
 
     [HttpPut("{id}")]

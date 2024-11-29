@@ -1,6 +1,7 @@
 using ApiContracts.DTOs;
 using Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using RepositoryContracts;
 
 [ApiController]
@@ -52,16 +53,18 @@ public class CategoriesController : ControllerBase
     }
 
     [HttpGet]
-    public ActionResult<List<CategoryDto>> GetMany()
+    public async Task<ActionResult<List<CategoryDto>>> GetMany()
     {
-        var categories = _categoryRepo.GetMany()
+        var query = await _categoryRepo.GetManyAsync();
+        
+        var categories = await query
             .Select(c => new CategoryDto
             {
                 Id = c.Id,
                 Name = c.Name,
                 Description = c.Description
             })
-            .ToList();
+            .ToListAsync();
 
         return Ok(categories);
     }

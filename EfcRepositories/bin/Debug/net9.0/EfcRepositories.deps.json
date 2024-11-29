@@ -8,9 +8,10 @@
     ".NETCoreApp,Version=v9.0": {
       "EfcRepositories/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": "9.0.0",
           "Microsoft.EntityFrameworkCore.Design": "9.0.0",
-          "RepositoryContracts": "1.0.0",
-          "WebAPI": "1.0.0"
+          "Microsoft.EntityFrameworkCore.Sqlite": "9.0.0",
+          "RepositoryContracts": "1.0.0"
         },
         "runtime": {
           "EfcRepositories.dll": {}
@@ -24,27 +25,6 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Authorization/9.0.0": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Metadata": "9.0.0",
-          "Microsoft.Extensions.Logging.Abstractions": "9.0.0",
-          "Microsoft.Extensions.Options": "9.0.0"
-        }
-      },
-      "Microsoft.AspNetCore.Components/9.0.0": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Authorization": "9.0.0",
-          "Microsoft.AspNetCore.Components.Analyzers": "9.0.0"
-        }
-      },
-      "Microsoft.AspNetCore.Components.Analyzers/9.0.0": {},
-      "Microsoft.AspNetCore.Components.Authorization/9.0.0": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Authorization": "9.0.0",
-          "Microsoft.AspNetCore.Components": "9.0.0"
-        }
-      },
-      "Microsoft.AspNetCore.Metadata/9.0.0": {},
       "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
         "runtime": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
@@ -442,10 +422,15 @@
           }
         }
       },
-      "Microsoft.Extensions.ApiDescription.Server/6.0.5": {},
       "Microsoft.Extensions.Caching.Abstractions/9.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "9.0.0"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Caching.Abstractions.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
+          }
         }
       },
       "Microsoft.Extensions.Caching.Memory/9.0.0": {
@@ -455,19 +440,44 @@
           "Microsoft.Extensions.Logging.Abstractions": "9.0.0",
           "Microsoft.Extensions.Options": "9.0.0",
           "Microsoft.Extensions.Primitives": "9.0.0"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Caching.Memory.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
+          }
         }
       },
       "Microsoft.Extensions.Configuration.Abstractions/9.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "9.0.0"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
+          }
         }
       },
       "Microsoft.Extensions.DependencyInjection/9.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
+          }
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.0": {},
+      "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.0": {
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyModel/9.0.0": {
         "runtime": {
           "lib/net9.0/Microsoft.Extensions.DependencyModel.dll": {
@@ -481,25 +491,42 @@
           "Microsoft.Extensions.DependencyInjection": "9.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "9.0.0",
           "Microsoft.Extensions.Options": "9.0.0"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Logging.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
+          }
         }
       },
       "Microsoft.Extensions.Logging.Abstractions/9.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
+          }
         }
       },
       "Microsoft.Extensions.Options/9.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0",
           "Microsoft.Extensions.Primitives": "9.0.0"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Options.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
+          }
         }
       },
-      "Microsoft.Extensions.Primitives/9.0.0": {},
-      "Microsoft.OpenApi/1.2.3": {
+      "Microsoft.Extensions.Primitives/9.0.0": {
         "runtime": {
-          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
-            "assemblyVersion": "1.2.3.0",
-            "fileVersion": "1.2.3.0"
+          "lib/net9.0/Microsoft.Extensions.Primitives.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
           }
         }
       },
@@ -657,44 +684,6 @@
           }
         }
       },
-      "Swashbuckle.AspNetCore/6.4.0": {
-        "dependencies": {
-          "Microsoft.Extensions.ApiDescription.Server": "6.0.5",
-          "Swashbuckle.AspNetCore.Swagger": "6.4.0",
-          "Swashbuckle.AspNetCore.SwaggerGen": "6.4.0",
-          "Swashbuckle.AspNetCore.SwaggerUI": "6.4.0"
-        }
-      },
-      "Swashbuckle.AspNetCore.Swagger/6.4.0": {
-        "dependencies": {
-          "Microsoft.OpenApi": "1.2.3"
-        },
-        "runtime": {
-          "lib/net6.0/Swashbuckle.AspNetCore.Swagger.dll": {
-            "assemblyVersion": "6.4.0.0",
-            "fileVersion": "6.4.0.0"
-          }
-        }
-      },
-      "Swashbuckle.AspNetCore.SwaggerGen/6.4.0": {
-        "dependencies": {
-          "Swashbuckle.AspNetCore.Swagger": "6.4.0"
-        },
-        "runtime": {
-          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
-            "assemblyVersion": "6.4.0.0",
-            "fileVersion": "6.4.0.0"
-          }
-        }
-      },
-      "Swashbuckle.AspNetCore.SwaggerUI/6.4.0": {
-        "runtime": {
-          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
-            "assemblyVersion": "6.4.0.0",
-            "fileVersion": "6.4.0.0"
-          }
-        }
-      },
       "System.CodeDom/6.0.0": {
         "runtime": {
           "lib/net6.0/System.CodeDom.dll": {
@@ -774,47 +763,12 @@
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
       "System.Text.Json/9.0.0": {},
       "System.Threading.Channels/7.0.0": {},
-      "ApiContracts/1.0.0": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "9.0.0"
-        },
-        "runtime": {
-          "ApiContracts.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "BlazorApp/1.0.0": {
-        "dependencies": {
-          "ApiContracts": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "9.0.0"
-        },
-        "runtime": {
-          "BlazorApp.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
       "Entities/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "9.0.0"
         },
         "runtime": {
           "Entities.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "FileRepositories/1.0.0": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "9.0.0",
-          "RepositoryContracts": "1.0.0"
-        },
-        "runtime": {
-          "FileRepositories.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -827,25 +781,6 @@
         },
         "runtime": {
           "RepositoryContracts.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "WebAPI/1.0.0": {
-        "dependencies": {
-          "ApiContracts": "1.0.0",
-          "BlazorApp": "1.0.0",
-          "Entities": "1.0.0",
-          "FileRepositories": "1.0.0",
-          "Microsoft.AspNetCore.Components.Authorization": "9.0.0",
-          "Microsoft.EntityFrameworkCore": "9.0.0",
-          "Microsoft.EntityFrameworkCore.Sqlite": "9.0.0",
-          "RepositoryContracts": "1.0.0",
-          "Swashbuckle.AspNetCore": "6.4.0"
-        },
-        "runtime": {
-          "WebAPI.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -865,41 +800,6 @@
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
-    },
-    "Microsoft.AspNetCore.Authorization/9.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-qDJlBC5pUQ/3o6/C6Vuo9CGKtV5TAe5AdKeHvDR2bgmw8vwPxsAy3KG5eU0i1C+iAUNbmq+iDTbiKt16f9pRiA==",
-      "path": "microsoft.aspnetcore.authorization/9.0.0",
-      "hashPath": "microsoft.aspnetcore.authorization.9.0.0.nupkg.sha512"
-    },
-    "Microsoft.AspNetCore.Components/9.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-xKzY0LRqWrwuPVzKIF9k1kC21NrLmIE2qPhhKlInEAdYqNe8qcMoPWZy7fo1uScHkz5g73nTqDDra3+aAV7mTQ==",
-      "path": "microsoft.aspnetcore.components/9.0.0",
-      "hashPath": "microsoft.aspnetcore.components.9.0.0.nupkg.sha512"
-    },
-    "Microsoft.AspNetCore.Components.Analyzers/9.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-maOE1qlJ9hf1Fb7PhFLw9bgP9mWckuDOcn1uKNt9/msdJG2YHl3cPRHojYa6CxliGHIXL8Da4qPgeUc4CaOoeg==",
-      "path": "microsoft.aspnetcore.components.analyzers/9.0.0",
-      "hashPath": "microsoft.aspnetcore.components.analyzers.9.0.0.nupkg.sha512"
-    },
-    "Microsoft.AspNetCore.Components.Authorization/9.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-LD5ApnnUgMAyFDMKXqhyKFksnnxicGxE15dvC6rnOynFzj11Rvf7bENjTP9HUIbD64MYug+wlhl06A4nicw+RQ==",
-      "path": "microsoft.aspnetcore.components.authorization/9.0.0",
-      "hashPath": "microsoft.aspnetcore.components.authorization.9.0.0.nupkg.sha512"
-    },
-    "Microsoft.AspNetCore.Metadata/9.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-X81C891nMuWgzNHyZ0C3s+blSDxRHzQHDFYQoOKtFvFuxGq3BbkLbc5CfiCqIzA/sWIfz6u8sGBgwntQwBJWBw==",
-      "path": "microsoft.aspnetcore.metadata/9.0.0",
-      "hashPath": "microsoft.aspnetcore.metadata.9.0.0.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
       "type": "package",
@@ -1020,13 +920,6 @@
       "path": "microsoft.entityframeworkcore.sqlite.core/9.0.0",
       "hashPath": "microsoft.entityframeworkcore.sqlite.core.9.0.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Ckb5EDBUNJdFWyajfXzUIMRkhf52fHZOQuuZg/oiu8y7zDCVwD0iHhew6MnThjHmevanpxL3f5ci2TtHQEN6bw==",
-      "path": "microsoft.extensions.apidescription.server/6.0.5",
-      "hashPath": "microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512"
-    },
     "Microsoft.Extensions.Caching.Abstractions/9.0.0": {
       "type": "package",
       "serviceable": true,
@@ -1097,13 +990,6 @@
       "path": "microsoft.extensions.primitives/9.0.0",
       "hashPath": "microsoft.extensions.primitives.9.0.0.nupkg.sha512"
     },
-    "Microsoft.OpenApi/1.2.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Nug3rO+7Kl5/SBAadzSMAVgqDlfGjJZ0GenQrLywJ84XGKO0uRqkunz5Wyl0SDwcR71bAATXvSdbdzPrYRYKGw==",
-      "path": "microsoft.openapi/1.2.3",
-      "hashPath": "microsoft.openapi.1.2.3.nupkg.sha512"
-    },
     "Mono.TextTemplating/3.0.0": {
       "type": "package",
       "serviceable": true,
@@ -1138,34 +1024,6 @@
       "sha512": "sha512-uZVTi02C1SxqzgT0HqTWatIbWGb40iIkfc3FpFCpE/r7g6K0PqzDUeefL6P6HPhDtc6BacN3yQysfzP7ks+wSQ==",
       "path": "sqlitepclraw.provider.e_sqlite3/2.1.10",
       "hashPath": "sqlitepclraw.provider.e_sqlite3.2.1.10.nupkg.sha512"
-    },
-    "Swashbuckle.AspNetCore/6.4.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-eUBr4TW0up6oKDA5Xwkul289uqSMgY0xGN4pnbOIBqCcN9VKGGaPvHX3vWaG/hvocfGDP+MGzMA0bBBKz2fkmQ==",
-      "path": "swashbuckle.aspnetcore/6.4.0",
-      "hashPath": "swashbuckle.aspnetcore.6.4.0.nupkg.sha512"
-    },
-    "Swashbuckle.AspNetCore.Swagger/6.4.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-nl4SBgGM+cmthUcpwO/w1lUjevdDHAqRvfUoe4Xp/Uvuzt9mzGUwyFCqa3ODBAcZYBiFoKvrYwz0rabslJvSmQ==",
-      "path": "swashbuckle.aspnetcore.swagger/6.4.0",
-      "hashPath": "swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512"
-    },
-    "Swashbuckle.AspNetCore.SwaggerGen/6.4.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-lXhcUBVqKrPFAQF7e/ZeDfb5PMgE8n5t6L5B6/BQSpiwxgHzmBcx8Msu42zLYFTvR5PIqE9Q9lZvSQAcwCxJjw==",
-      "path": "swashbuckle.aspnetcore.swaggergen/6.4.0",
-      "hashPath": "swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512"
-    },
-    "Swashbuckle.AspNetCore.SwaggerUI/6.4.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-1Hh3atb3pi8c+v7n4/3N80Jj8RvLOXgWxzix6w3OZhB7zBGRwsy7FWr4e3hwgPweSBpwfElqj4V4nkjYabH9nQ==",
-      "path": "swashbuckle.aspnetcore.swaggerui/6.4.0",
-      "hashPath": "swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
     },
     "System.CodeDom/6.0.0": {
       "type": "package",
@@ -1265,32 +1123,12 @@
       "path": "system.threading.channels/7.0.0",
       "hashPath": "system.threading.channels.7.0.0.nupkg.sha512"
     },
-    "ApiContracts/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "BlazorApp/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "Entities/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "FileRepositories/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "RepositoryContracts/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "WebAPI/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

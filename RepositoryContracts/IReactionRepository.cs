@@ -8,5 +8,5 @@ public interface IReactionRepository
     Task UpdateAsync(Reaction reaction);
     Task DeleteAsync(int id);
     Task<Reaction> GetSingleAsync(int id);
-    IQueryable<Reaction> GetMany();
+    Task<IQueryable<Reaction>> GetManyAsync();
 }

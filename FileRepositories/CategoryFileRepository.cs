@@ -67,9 +67,9 @@ public class CategoryFileRepository : ICategoryRepository
         return category;
     }
 
-    public IQueryable<Category> GetMany()
+    public async Task<IQueryable<Category>> GetManyAsync()
     {
-        string categoriesAsJson = File.ReadAllTextAsync(filePath).Result;
+        string categoriesAsJson = await File.ReadAllTextAsync(filePath);
         List<Category> categories = JsonSerializer.Deserialize<List<Category>>(categoriesAsJson)!;
         return categories.AsQueryable();
     }
