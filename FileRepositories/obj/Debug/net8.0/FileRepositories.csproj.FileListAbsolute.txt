@@ -34,3 +34,5 @@ C:/Documents/IntelliJ work/DNP-Assignment/FileRepositories/obj/Debug/net8.0/ref/
 /Users/unknownuser/dev_projects/school/DNP-Assignment/FileRepositories/obj/Debug/net8.0/refint/FileRepositories.dll
 /Users/unknownuser/dev_projects/school/DNP-Assignment/FileRepositories/obj/Debug/net8.0/FileRepositories.pdb
 /Users/unknownuser/dev_projects/school/DNP-Assignment/FileRepositories/obj/Debug/net8.0/ref/FileRepositories.dll
+/Users/unknownuser/dev_projects/school/DNP-Assignment/FileRepositories/bin/Debug/net8.0/FileRepositories.runtimeconfig.json
+/Users/unknownuser/dev_projects/school/DNP-Assignment/FileRepositories/obj/Debug/net8.0/FileRepositories.genruntimeconfig.cache

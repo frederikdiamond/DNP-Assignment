@@ -23,3 +23,5 @@ C:/Documents/IntelliJ work/DNP-Assignment/ApiContracts/obj/Debug/net8.0/ref/ApiC
 /Users/unknownuser/dev_projects/school/DNP-Assignment/ApiContracts/obj/Debug/net8.0/ApiContracts.pdb
 /Users/unknownuser/dev_projects/school/DNP-Assignment/ApiContracts/obj/Debug/net8.0/ref/ApiContracts.dll
 /Users/unknownuser/dev_projects/school/DNP-Assignment/ApiContracts/obj/Debug/net8.0/ApiContracts.csproj.AssemblyReference.cache
+/Users/unknownuser/dev_projects/school/DNP-Assignment/ApiContracts/bin/Debug/net8.0/ApiContracts.runtimeconfig.json
+/Users/unknownuser/dev_projects/school/DNP-Assignment/ApiContracts/obj/Debug/net8.0/ApiContracts.genruntimeconfig.cache

@@ -7,6 +7,7 @@ public class CreatePostView
 {
     private readonly IPostRepository postRepository;
     private readonly IUserRepository userRepository;
+    
     public CreatePostView(IPostRepository postRepository, IUserRepository userRepository)
     {
         this.postRepository = postRepository;
@@ -23,7 +24,7 @@ public class CreatePostView
         string body = Console.ReadLine();
         
         int userId;
-        User user = null;
+        User user;
         
         //add the userId to the post manually,
         //will later be replaced because a proper login system will be implemented
@@ -48,19 +49,21 @@ public class CreatePostView
         }
 
             // Create the post with valid UserId
-            Post createdPost = await CreatePostAsync(title, body, userId);
+            Post createdPost = await CreatePostAsync(title, body, user);
             Console.WriteLine($"Post '{createdPost.Title}' with body '{createdPost.Body}' created successfully by user '{user.Username}' with ID: {createdPost.PostId}!");
         }
 
-    private async Task<Post> CreatePostAsync(string title, string body, int userId)
+    private async Task<Post> CreatePostAsync(string title, string body, User user)
     {
         // Create a new Post object
-        Post newPost = new Post
+        /*Post newPost = new Post
         {
             Title = title,
             Body = body,
             UserId = userId,
-        };
+        };*/
+        
+        Post newPost = new Post(title, body, user);
 
         // Add the post to the repository and return the created post
         return await postRepository.AddAsync(newPost);

@@ -3,10 +3,8 @@ using RepositoryContracts;
 
 namespace InMemoryRepositories;
 
-public class PostInMemoryRepository : IPostRepository
+/*public class PostInMemoryRepository : IPostRepository
 {
-    
-    
     private List<Post> posts;
     
     public PostInMemoryRepository()
@@ -74,4 +72,4 @@ public class PostInMemoryRepository : IPostRepository
         return await Task.FromResult(posts.AsQueryable());
     }
 
-}
+}*/

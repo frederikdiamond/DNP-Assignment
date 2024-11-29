@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xqpsB+MfKqaobJuQ3sHvM9334xeoA77JnpYXIjuW19E=",
+  "Hash": "SmA739YtCE3GsNavtdVt+gRnhnUZC8EyX4ZID4XVmAw=",
   "Source": "WebAPI",
   "BasePath": "_content/WebAPI",
   "Mode": "Default",
@@ -11,10 +11,10 @@
       "Version": 2,
       "Source": "BlazorApp",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishProperties": "",
       "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildProperties": "",
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
     }
   ],
@@ -592,7 +592,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 15 Nov 2024 12:32:37 GMT"
+          "Value": "Fri, 15 Nov 2024 13:36:13 GMT"
         },
         {
           "Name": "Vary",
@@ -649,7 +649,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 15 Nov 2024 12:32:37 GMT"
+          "Value": "Fri, 15 Nov 2024 13:36:13 GMT"
         }
       ],
       "EndpointProperties": [
@@ -698,7 +698,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 15 Nov 2024 12:32:37 GMT"
+          "Value": "Fri, 15 Nov 2024 13:36:13 GMT"
         },
         {
           "Name": "Vary",
@@ -753,7 +753,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 15 Nov 2024 12:32:37 GMT"
+          "Value": "Fri, 15 Nov 2024 13:36:13 GMT"
         },
         {
           "Name": "Vary",
@@ -802,7 +802,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 15 Nov 2024 12:32:37 GMT"
+          "Value": "Fri, 15 Nov 2024 13:36:13 GMT"
         }
       ],
       "EndpointProperties": [
@@ -843,7 +843,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 15 Nov 2024 12:32:37 GMT"
+          "Value": "Fri, 15 Nov 2024 13:36:13 GMT"
         },
         {
           "Name": "Vary",
@@ -1560,7 +1560,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 15 Nov 2024 10:47:43 GMT"
+          "Value": "Fri, 15 Nov 2024 13:36:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1629,7 +1629,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 15 Nov 2024 10:47:43 GMT"
+          "Value": "Fri, 15 Nov 2024 13:36:13 GMT"
         },
         {
           "Name": "Link",
@@ -1674,7 +1674,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 15 Nov 2024 10:47:43 GMT"
+          "Value": "Fri, 15 Nov 2024 13:36:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1729,7 +1729,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 15 Nov 2024 10:47:43 GMT"
+          "Value": "Fri, 15 Nov 2024 13:36:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1790,7 +1790,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 15 Nov 2024 10:47:43 GMT"
+          "Value": "Fri, 15 Nov 2024 13:36:13 GMT"
         },
         {
           "Name": "Link",
@@ -1827,7 +1827,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 15 Nov 2024 10:47:43 GMT"
+          "Value": "Fri, 15 Nov 2024 13:36:13 GMT"
         },
         {
           "Name": "Cache-Control",

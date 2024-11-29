@@ -17,11 +17,13 @@ public class CategoriesController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<CategoryDto>> Create([FromBody] CreateCategoryDto request)
     {
-        var category = new Category
+        /*var category = new Category
         {
             Name = request.Name,
             Description = request.Description
-        };
+        };*/
+        
+        var category = new Category(request.Name, request.Description);
 
         var created = await _categoryRepo.AddAsync(category);
         var dto = new CategoryDto

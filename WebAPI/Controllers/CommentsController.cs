@@ -8,22 +8,43 @@ using RepositoryContracts;
 public class CommentsController : ControllerBase
 {
     private readonly ICommentRepository _commentRepo;
+    private readonly IUserRepository _userRepository;
+    private readonly IPostRepository _postRepository;
 
-    public CommentsController(ICommentRepository commentRepo)
+    public CommentsController(
+        ICommentRepository commentRepo,
+        IUserRepository userRepository,
+        IPostRepository postRepository)
     {
         _commentRepo = commentRepo;
+        _userRepository = userRepository;
+        _postRepository = postRepository;
     }
 
     [HttpPost]
-    public async Task<ActionResult<CommentDto>> Create([FromBody] CreateCommentDto request)
+    public async Task<ActionResult<CommentDto>> Create([FromBody] CreateCommentDto createCommentDto)
     {
-        var comment = new Comment
+        /*var comment = new Comment
         {
             Body = request.Body,
             PostId = request.PostId,
             UserId = request.UserId
-        };
+        };*/
+        
+        var user = await _userRepository.GetSingleAsync(createCommentDto.UserId);
+        if (user == null)
+        {
+            return NotFound("User not found");
+        }
 
+        var post = await _postRepository.GetSingleAsync(createCommentDto.PostId);
+        if (post == null)
+        {
+            return NotFound("Post not found");
+        }
+        
+        var comment = new Comment(createCommentDto.Body, user, post);
+        
         var created = await _commentRepo.AddAsync(comment);
         var dto = new CommentDto
         {

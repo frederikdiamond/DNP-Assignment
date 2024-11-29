@@ -53,11 +53,13 @@ public class AuthController : ControllerBase
             return BadRequest("Username is already taken");
         }
 
-        var user = new User
+        /*var user = new User
         {
             Username = createUserDto.Username,
             Password = createUserDto.Password
-        };
+        };*/
+        
+        var user = new User(createUserDto.Username, createUserDto.Password);
 
         var createdUser = await _userRepository.AddAsync(user);
 

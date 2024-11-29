@@ -18,11 +18,13 @@ public class UsersController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<UserDto>> Create([FromBody] CreateUserDto request)
     {
-        var user = new User
+        /*var user = new User
         {
             Username = request.Username,
             Password = request.Password
-        };
+        };*/
+        
+        var user = new User(request.Username, request.Password);
 
         var created = await _userRepo.AddAsync(user);
         var dto = new UserDto

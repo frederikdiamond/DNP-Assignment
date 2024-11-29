@@ -23,23 +23,23 @@ public class CreateUserView
         string password = Console.ReadLine();
             
         // Call AddUser to add the new user before confirming it was created
-        await AddUserAsync(username);
+        await AddUserAsync(username, password);
 
         Console.WriteLine($"User '{username}' created successfully!");
     }
 
-    private async Task AddUserAsync(string username)
+    private async Task AddUserAsync(string username, string password)
     {
-        string password = null;
+        /*string password = null;
         User newUser = new User
         {
             Username = username,
             Password = password,
-            // add other properties (password, etc.)
-        };
+        };*/
+        
+        User newUser = new User(username, password);
 
         // Add the user to the repository
         await userRepository.AddAsync(newUser);
     }
-    
 }

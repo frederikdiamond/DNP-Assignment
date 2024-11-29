@@ -23,3 +23,5 @@ C:/Documents/IntelliJ work/DNP-Assignment/Entities/obj/Debug/net8.0/ref/Entities
 /Users/unknownuser/dev_projects/school/DNP-Assignment/Entities/obj/Debug/net8.0/Entities.pdb
 /Users/unknownuser/dev_projects/school/DNP-Assignment/Entities/obj/Debug/net8.0/ref/Entities.dll
 /Users/unknownuser/dev_projects/school/DNP-Assignment/Entities/obj/Debug/net8.0/Entities.csproj.AssemblyReference.cache
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Entities/bin/Debug/net8.0/Entities.runtimeconfig.json
+/Users/unknownuser/dev_projects/school/DNP-Assignment/Entities/obj/Debug/net8.0/Entities.genruntimeconfig.cache

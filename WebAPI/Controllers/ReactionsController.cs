@@ -9,16 +9,20 @@ using RepositoryContracts;
 public class ReactionsController : ControllerBase
 {
     private readonly IReactionRepository _reactionRepo;
+    private readonly IUserRepository _userRepository;
+    private readonly IPostRepository _postRepository;
 
-    public ReactionsController(IReactionRepository reactionRepo)
+    public ReactionsController(IReactionRepository reactionRepo, IUserRepository userRepository, IPostRepository postRepository)
     {
         _reactionRepo = reactionRepo;
+        _userRepository = userRepository;
+        _postRepository = postRepository;
     }
 
     [HttpPost]
     public async Task<ActionResult<ReactionDto>> Create([FromBody] CreateReactionDto request)
     {
-        var reaction = new Reaction
+        /*var reaction = new Reaction
         {
             UserId = request.UserId,
             PostId = request.PostId,
@@ -26,7 +30,21 @@ public class ReactionsController : ControllerBase
             Timestamp = (int)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds,
             UpvoteCounter = request.IsUpvote ? 1 : 0,
             DownvoteCounter = request.IsUpvote ? 0 : 1
-        };
+        };*/
+        
+        var user = await _userRepository.GetSingleAsync(request.UserId);
+        if (user == null)
+        {
+            return NotFound("User not found");
+        }
+        
+        var post = await _postRepository.GetSingleAsync(request.PostId);
+        if (post == null)
+        {
+            return NotFound("Post not found");
+        }
+
+        var reaction = new Reaction(user, post);
 
         var created = await _reactionRepo.AddAsync(reaction);
         var dto = new ReactionDto

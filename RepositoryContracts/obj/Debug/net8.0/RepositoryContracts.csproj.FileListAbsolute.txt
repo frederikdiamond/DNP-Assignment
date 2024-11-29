@@ -30,3 +30,5 @@ C:/Documents/IntelliJ work/DNP-Assignment/RepositoryContracts/obj/Debug/net8.0/r
 /Users/unknownuser/dev_projects/school/DNP-Assignment/RepositoryContracts/obj/Debug/net8.0/refint/RepositoryContracts.dll
 /Users/unknownuser/dev_projects/school/DNP-Assignment/RepositoryContracts/obj/Debug/net8.0/RepositoryContracts.pdb
 /Users/unknownuser/dev_projects/school/DNP-Assignment/RepositoryContracts/obj/Debug/net8.0/ref/RepositoryContracts.dll
+/Users/unknownuser/dev_projects/school/DNP-Assignment/RepositoryContracts/bin/Debug/net8.0/RepositoryContracts.runtimeconfig.json
+/Users/unknownuser/dev_projects/school/DNP-Assignment/RepositoryContracts/obj/Debug/net8.0/RepositoryContracts.genruntimeconfig.cache

@@ -3,7 +3,7 @@ using RepositoryContracts;
 
 namespace InMemoryRepositories;
 
-public class UserInMemoryRepository : IUserRepository
+/*public class UserInMemoryRepository : IUserRepository
 {
     private List<User> users;
     
@@ -66,4 +66,4 @@ public class UserInMemoryRepository : IUserRepository
         User created = await AddAsync(user);
         Console.WriteLine($"User '{created.Username}' added successfully with ID: {created.Id}");
     }
-}
+}*/

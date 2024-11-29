@@ -9,24 +9,34 @@ public class PostsController : ControllerBase
 {
     private readonly IPostRepository _postRepo;
     private readonly IReactionRepository _reactionRepo;
+    private readonly IUserRepository _userRepository;
 
-    public PostsController(IPostRepository postRepo, IReactionRepository reactionRepo)
+    public PostsController(IPostRepository postRepo, IReactionRepository reactionRepo, IUserRepository userRepository)
     {
         _postRepo = postRepo;
         _reactionRepo = reactionRepo;
+        _userRepository = userRepository;
     }
 
     [HttpPost]
     public async Task<ActionResult<PostDto>> Create([FromBody] CreatePostDto request)
     {
-        var post = new Post
+        /*var post = new Post
         {
             Title = request.Title,
             Body = request.Body,
             UserId = request.UserId,
             CreatedAt = DateTime.UtcNow.ToString("o")
-        };
+        };*/
+        
+        var user = await _userRepository.GetSingleAsync(request.UserId);
+        if (user == null)
+        {
+            return NotFound("User not found");
+        }
 
+        var post = new Post(request.Title, request.Body, user);
+        
         var created = await _postRepo.AddAsync(post);
         var dto = new PostDto
         {
